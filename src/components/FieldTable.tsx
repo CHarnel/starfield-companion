@@ -35,12 +35,28 @@ export function FieldTable({ item, nameField }: FieldTableProps) {
   );
 }
 
+function formatObject(obj: Record<string, unknown>): string {
+  if ('name' in obj) {
+    const extra = Object.entries(obj)
+      .filter(([k]) => k !== 'name')
+      .map(([, v]) => (typeof v === 'number' ? `${Math.round(v * 100)}%` : String(v)));
+    return extra.length ? `${obj.name} (${extra.join(', ')})` : String(obj.name);
+  }
+  return Object.entries(obj)
+    .map(([k, v]) => `${humanizeKey(k)}: ${v}`)
+    .join(', ');
+}
+
 function formatValue(value: unknown): string {
   if (Array.isArray(value)) {
-    return value.map((v) => (typeof v === 'object' ? JSON.stringify(v) : String(v))).join(', ');
+    return value
+      .map((v) =>
+        typeof v === 'object' && v !== null ? formatObject(v as Record<string, unknown>) : String(v)
+      )
+      .join(', ');
   }
   if (typeof value === 'object' && value !== null) {
-    return JSON.stringify(value);
+    return formatObject(value as Record<string, unknown>);
   }
   return String(value);
 }
