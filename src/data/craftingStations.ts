@@ -107,121 +107,85 @@ function buildResearchLab(): CraftingStation {
   };
 }
 
-function resolveSkillTierLabel(mod: { requiredResearch?: string; skillTier?: string }): string {
-  if (!mod.requiredResearch) return 'No Research Required';
-  if (mod.skillTier && mod.skillTier !== 'None') return mod.skillTier;
-  return mod.requiredResearch;
+function tierSortKey(mod: { skillTier?: string; requiredResearch?: string }): number {
+  if (!mod.requiredResearch) return 0;
+  const tierFromName = mod.requiredResearch.match(/(\d+)$/);
+  if (tierFromName) return parseInt(tierFromName[1], 10);
+  return 5;
 }
 
-function buildWeaponWorkbench(): CraftingStation {
-  type RawMod = {
-    name: string;
-    type: string;
-    effect: string;
-    materials: string;
-    requiredResearch: string;
-    skillTier: string;
-  };
-  const data = weaponMods as RawMod[];
+type RawMod = {
+  name: string;
+  type: string;
+  effect: string;
+  materials: string;
+  requiredResearch: string;
+  skillTier: string;
+};
 
-  const sectionOrder: string[] = [];
-  const sectionSet = new Set<string>();
+function buildModWorkbench(
+  id: string,
+  label: string,
+  icon: string,
+  description: string,
+  rawMods: RawMod[],
+  typeOrder: string[],
+): CraftingStation {
+  const sections: string[] = [];
+  const allItems: CraftingRecipe[] = [];
 
-  const items: CraftingRecipe[] = data.map((m) => {
-    const section = resolveSkillTierLabel(m);
-    if (!sectionSet.has(section)) {
-      sectionSet.add(section);
-      sectionOrder.push(section);
+  for (const modType of typeOrder) {
+    const modsOfType = rawMods
+      .filter((m) => m.type === modType)
+      .sort((a, b) => tierSortKey(a) - tierSortKey(b));
+
+    if (modsOfType.length === 0) continue;
+    sections.push(modType);
+
+    for (const m of modsOfType) {
+      allItems.push({
+        name: m.name,
+        type: m.type,
+        effect: m.effect,
+        materials: m.materials,
+        ingredients: parseMaterialString(m.materials),
+        requiredResearch: m.requiredResearch,
+        skillTier: m.skillTier,
+        section: modType,
+      });
     }
-    return {
-      name: m.name,
-      type: m.type,
-      effect: m.effect,
-      materials: m.materials,
-      ingredients: parseMaterialString(m.materials),
-      requiredResearch: m.requiredResearch,
-      skillTier: m.skillTier,
-      section,
-    };
-  });
+  }
 
-  const tierPriority: Record<string, number> = {
-    'No Research Required': 0,
-    'None': 1,
-    'Rank 1': 2,
-    'Rank 2': 3,
-    'Rank 3': 4,
-    'Rank 4': 5,
-  };
-  sectionOrder.sort((a, b) => {
-    const pa = tierPriority[a] ?? 10;
-    const pb = tierPriority[b] ?? 10;
-    return pa - pb;
-  });
+  return { id, label, icon, description, recipes: allItems, sections };
+}
 
-  return {
-    id: 'weapon',
-    label: 'Weapon Workbench',
-    icon: 'hammer-outline',
-    description: 'Weapon modifications and upgrades',
-    recipes: items,
-    sections: sectionOrder,
-  };
+const WEAPON_TYPE_ORDER = [
+  'Barrel', 'Receiver', 'Magazine and Battery', 'Muzzle',
+  'Grip and Stock', 'Optic', 'Laser', 'Internal', 'Cover',
+];
+
+const SPACESUIT_TYPE_ORDER = ['Helmet Mod', 'Spacesuit Mod', 'Pack Mod'];
+
+function buildWeaponWorkbench(): CraftingStation {
+  return buildModWorkbench(
+    'weapon',
+    'Weapon Workbench',
+    'hammer-outline',
+    'Weapon modifications and upgrades',
+    weaponMods as RawMod[],
+    WEAPON_TYPE_ORDER,
+  );
 }
 
 function buildSpacesuitWorkbench(): CraftingStation {
-  type RawMod = {
-    name: string;
-    type: string;
-    effect: string;
-    materials: string;
-    requiredResearch: string;
-    skillTier: string;
-  };
-  const data = armorMods as RawMod[];
-
-  const sectionOrder: string[] = [];
-  const sectionSet = new Set<string>();
-
-  const items: CraftingRecipe[] = data.map((m) => {
-    const section = resolveSkillTierLabel(m);
-    if (!sectionSet.has(section)) {
-      sectionSet.add(section);
-      sectionOrder.push(section);
-    }
-    return {
-      name: m.name,
-      type: m.type,
-      effect: m.effect,
-      materials: m.materials,
-      ingredients: parseMaterialString(m.materials),
-      requiredResearch: m.requiredResearch,
-      skillTier: m.skillTier,
-      section,
-    };
-  });
-
-  const tierPriority: Record<string, number> = {
-    'No Research Required': 0,
-    'None': 1,
-    'Rank 1': 2,
-    'Rank 2': 3,
-    'Rank 3': 4,
-  };
-  sectionOrder.sort((a, b) => {
-    const pa = tierPriority[a] ?? 10;
-    const pb = tierPriority[b] ?? 10;
-    return pa - pb;
-  });
-
-  return {
-    id: 'spacesuit',
-    label: 'Spacesuit Workbench',
-    icon: 'shirt-outline',
-    description: 'Spacesuit, helmet, and pack modifications',
-    recipes: items,
-    sections: sectionOrder,
-  };
+  return buildModWorkbench(
+    'spacesuit',
+    'Spacesuit Workbench',
+    'shirt-outline',
+    'Spacesuit, helmet, and pack modifications',
+    armorMods as RawMod[],
+    SPACESUIT_TYPE_ORDER,
+  );
 }
 
 const stations: CraftingStation[] = [

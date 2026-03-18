@@ -44,23 +44,30 @@ export default function StationScreen() {
     [sections],
   );
 
+  const showTierBadges = station?.id === 'weapon' || station?.id === 'spacesuit';
+
   const renderItem = useCallback(
     ({ item }: { item: { recipe: CraftingRecipe; index: number } }) => {
       const { recipe, index } = item;
+      const tierLabel = recipe.skillTier && recipe.skillTier !== 'None'
+        ? recipe.skillTier
+        : recipe.requiredResearch || '';
       return (
         <Pressable
           style={({ pressed }) => [styles.row, pressed && styles.rowPressed]}
           onPress={() => router.push(`/recipe/${id}/${index}` as any)}
         >
           <View style={styles.rowContent}>
-            <Text style={styles.rowName} numberOfLines={1}>
-              {recipe.name}
-            </Text>
-            {recipe.type && (
-              <View style={styles.rowMeta}>
-                <Text style={styles.rowType}>{recipe.type}</Text>
-              </View>
-            )}
+            <View style={styles.rowNameLine}>
+              <Text style={styles.rowName} numberOfLines={1}>
+                {recipe.name}
+              </Text>
+              {showTierBadges && tierLabel !== '' && (
+                <View style={styles.tierBadge}>
+                  <Text style={styles.tierBadgeText}>{tierLabel}</Text>
+                </View>
+              )}
+            </View>
             {recipe.effect && (
               <Text style={styles.rowEffect} numberOfLines={1}>
                 {recipe.effect}
@@ -76,7 +83,7 @@ export default function StationScreen() {
         </Pressable>
       );
     },
-    [id, router],
+    [id, router, showTierBadges],
   );
 
   if (!station) {
@@ -186,19 +193,28 @@ const styles = StyleSheet.create({
     flex: 1,
     marginRight: spacing.sm,
   },
+  rowNameLine: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: spacing.sm,
+  },
   rowName: {
     fontFamily: fonts.heading,
     fontSize: fontSize.md,
     color: colors.textPrimary,
+    flexShrink: 1,
   },
-  rowMeta: {
-    flexDirection: 'row',
-    marginTop: 2,
+  tierBadge: {
+    paddingHorizontal: spacing.xs + 2,
+    paddingVertical: 1,
+    borderRadius: 2,
+    backgroundColor: '#1a2a3a',
   },
-  rowType: {
+  tierBadgeText: {
     fontFamily: fonts.mono,
-    fontSize: fontSize.xs,
+    fontSize: 9,
     color: colors.primary,
+    textTransform: 'uppercase',
   },
   rowEffect: {
     fontFamily: fonts.body,
