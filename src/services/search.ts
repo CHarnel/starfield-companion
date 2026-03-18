@@ -68,11 +68,3 @@ export function search(query: string, limit = 50): SearchResult[] {
     score: r.score ?? 1,
   }));
 }
-
-export function searchInCategory(
-  categoryId: string,
-  query: string
-): SearchResult[] {
-  const results = search(query, 200);
-  return results.filter((r) => r.categoryId === categoryId);
-}
