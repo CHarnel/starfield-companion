@@ -2,6 +2,9 @@ import recipes from './json/recipes.json';
 import researchLab from './json/research_laboratory.json';
 import weaponMods from './json/weapon_mods.json';
 import armorMods from './json/armor_mods.json';
+import cookingRecipes from './json/cooking_recipes.json';
+import pharmaRecipes from './json/pharma_recipes.json';
+import consumables from './json/Consumables.json';
 
 export interface CraftingIngredient {
   name: string;
@@ -188,11 +191,108 @@ function buildSpacesuitWorkbench(): CraftingStation {
   );
 }
 
+type RawConsumableRecipe = {
+  name: string;
+  ingredients: { name: string; quantity: number }[];
+  requiredResearch: string;
+  category: string;
+};
+
+const consumableLookup = new Map(
+  (consumables as { name: string; effect?: string; description?: string }[]).map(
+    (c) => [c.name.toLowerCase(), c]
+  )
+);
+
+function buildConsumableStation(
+  id: string,
+  label: string,
+  icon: string,
+  description: string,
+  rawRecipes: RawConsumableRecipe[],
+  sectionOrder: string[],
+): CraftingStation {
+  const sections: string[] = [];
+  const allItems: CraftingRecipe[] = [];
+
+  for (const section of sectionOrder) {
+    const matching = rawRecipes.filter((r) => r.category === section);
+    if (matching.length === 0) continue;
+    sections.push(section);
+
+    const sorted = [...matching].sort((a, b) => {
+      const aT = a.requiredResearch.match(/(\d+)$/);
+      const bT = b.requiredResearch.match(/(\d+)$/);
+      const aN = aT ? parseInt(aT[1], 10) : 0;
+      const bN = bT ? parseInt(bT[1], 10) : 0;
+      if (aN !== bN) return aN - bN;
+      return a.name.localeCompare(b.name);
+    });
+
+    for (const r of sorted) {
+      const info = consumableLookup.get(r.name.toLowerCase());
+      allItems.push({
+        name: r.name,
+        materials: r.ingredients
+          .map((i) => `${i.name} x${i.quantity}`)
+          .join(', '),
+        ingredients: r.ingredients,
+        effect: info?.effect || '',
+        requiredResearch: r.requiredResearch,
+        section,
+      });
+    }
+  }
+
+  return { id, label, icon, description, recipes: allItems, sections };
+}
+
+const COOKING_SECTIONS = [
+  'Basic',
+  'Old Earth Cuisine',
+  'Beverage Development',
+  'Mixology',
+  'Exotic Recipes',
+  'Magazine Recipes',
+];
+
+const PHARMA_SECTIONS = [
+  'Basic',
+  'Medical Treatment',
+  'Performance Enhancement',
+  'Innovative Synthesis',
+  'Magazine Recipes',
+];
+
+function buildCookingStation(): CraftingStation {
+  return buildConsumableStation(
+    'cooking',
+    'Cooking Station',
+    'restaurant-outline',
+    'Food and drink recipes',
+    cookingRecipes as RawConsumableRecipe[],
+    COOKING_SECTIONS,
+  );
+}
+
+function buildPharmaLab(): CraftingStation {
+  return buildConsumableStation(
+    'pharma',
+    'Pharmaceutical Lab',
+    'medkit-outline',
+    'Chems, medicines, and aid items',
+    pharmaRecipes as RawConsumableRecipe[],
+    PHARMA_SECTIONS,
+  );
+}
+
 const stations: CraftingStation[] = [
   buildIndustrialWorkbench(),
   buildResearchLab(),
   buildWeaponWorkbench(),
   buildSpacesuitWorkbench(),
+  buildCookingStation(),
+  buildPharmaLab(),
 ];
 
 const stationMap = new Map<string, CraftingStation>(

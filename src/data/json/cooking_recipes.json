@@ -1,0 +1,984 @@
+[
+    {
+        "name": "Alien Jerky",
+        "ingredients": [
+            {
+                "name": "Nutrient",
+                "quantity": 1
+            },
+            {
+                "name": "Membrane",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "",
+        "category": "Basic"
+    },
+    {
+        "name": "Alien Sandwich",
+        "ingredients": [
+            {
+                "name": "Nutrient",
+                "quantity": 1
+            },
+            {
+                "name": "Bread",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "",
+        "category": "Basic"
+    },
+    {
+        "name": "Alien Scramble",
+        "ingredients": [
+            {
+                "name": "Nutrient",
+                "quantity": 1
+            },
+            {
+                "name": "Egg",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "",
+        "category": "Basic"
+    },
+    {
+        "name": "Alien Tea",
+        "ingredients": [
+            {
+                "name": "Distilled Water",
+                "quantity": 1
+            },
+            {
+                "name": "Fiber",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "",
+        "category": "Basic"
+    },
+    {
+        "name": "Distilled Water",
+        "ingredients": [
+            {
+                "name": "Water",
+                "quantity": 1
+            },
+            {
+                "name": "Membrane",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "",
+        "category": "Basic"
+    },
+    {
+        "name": "Grilled Cheese Sandwich",
+        "ingredients": [
+            {
+                "name": "Bread",
+                "quantity": 1
+            },
+            {
+                "name": "Cheese",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "",
+        "category": "Basic"
+    },
+    {
+        "name": "Ham and Cheese Sandwich",
+        "ingredients": [
+            {
+                "name": "Bread",
+                "quantity": 1
+            },
+            {
+                "name": "Synthameat Ham",
+                "quantity": 1
+            },
+            {
+                "name": "Cheese",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "",
+        "category": "Basic"
+    },
+    {
+        "name": "Barbacoa Wrap",
+        "ingredients": [
+            {
+                "name": "Red Meat",
+                "quantity": 1
+            },
+            {
+                "name": "Cheese",
+                "quantity": 1
+            },
+            {
+                "name": "Spice",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "Old Earth Cuisine 3",
+        "category": "Old Earth Cuisine"
+    },
+    {
+        "name": "Chapaguri",
+        "ingredients": [
+            {
+                "name": "Noodles",
+                "quantity": 2
+            },
+            {
+                "name": "Spice",
+                "quantity": 1
+            },
+            {
+                "name": "Distilled Water",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "Old Earth Cuisine 3",
+        "category": "Old Earth Cuisine"
+    },
+    {
+        "name": "Chicken Marsala",
+        "ingredients": [
+            {
+                "name": "Poultry",
+                "quantity": 1
+            },
+            {
+                "name": "Wine",
+                "quantity": 1
+            },
+            {
+                "name": "Dairy",
+                "quantity": 1
+            },
+            {
+                "name": "Spice",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "Old Earth Cuisine 2",
+        "category": "Old Earth Cuisine"
+    },
+    {
+        "name": "Chicken Tikka",
+        "ingredients": [
+            {
+                "name": "Poultry",
+                "quantity": 1
+            },
+            {
+                "name": "Spice",
+                "quantity": 1
+            },
+            {
+                "name": "Yogurt",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "Old Earth Cuisine 3",
+        "category": "Old Earth Cuisine"
+    },
+    {
+        "name": "Dal Makhani",
+        "ingredients": [
+            {
+                "name": "Beans",
+                "quantity": 1
+            },
+            {
+                "name": "Spice",
+                "quantity": 1
+            },
+            {
+                "name": "Butter",
+                "quantity": 1
+            },
+            {
+                "name": "Onion",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "Old Earth Cuisine 4",
+        "category": "Old Earth Cuisine"
+    },
+    {
+        "name": "Doro Wat",
+        "ingredients": [
+            {
+                "name": "Poultry",
+                "quantity": 1
+            },
+            {
+                "name": "Spice",
+                "quantity": 1
+            },
+            {
+                "name": "Egg",
+                "quantity": 1
+            },
+            {
+                "name": "Bread",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "Old Earth Cuisine 4",
+        "category": "Old Earth Cuisine"
+    },
+    {
+        "name": "Grandpa's Meatloaf",
+        "ingredients": [
+            {
+                "name": "Dairy",
+                "quantity": 1
+            },
+            {
+                "name": "Red Meat",
+                "quantity": 1
+            },
+            {
+                "name": "Egg",
+                "quantity": 1
+            },
+            {
+                "name": "Tomato",
+                "quantity": 1
+            },
+            {
+                "name": "Onion",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "Old Earth Cuisine 4",
+        "category": "Old Earth Cuisine"
+    },
+    {
+        "name": "Latkes",
+        "ingredients": [
+            {
+                "name": "Spice",
+                "quantity": 1
+            },
+            {
+                "name": "Egg",
+                "quantity": 1
+            },
+            {
+                "name": "Potato",
+                "quantity": 1
+            },
+            {
+                "name": "Onion",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "Old Earth Cuisine 2",
+        "category": "Old Earth Cuisine"
+    },
+    {
+        "name": "Meatloaf",
+        "ingredients": [
+            {
+                "name": "Dairy",
+                "quantity": 1
+            },
+            {
+                "name": "Red Meat",
+                "quantity": 1
+            },
+            {
+                "name": "Egg",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "Old Earth Cuisine 1",
+        "category": "Old Earth Cuisine"
+    },
+    {
+        "name": "Pappardelle Bolognese",
+        "ingredients": [
+            {
+                "name": "Red Meat",
+                "quantity": 1
+            },
+            {
+                "name": "Cheese",
+                "quantity": 1
+            },
+            {
+                "name": "Spice",
+                "quantity": 1
+            },
+            {
+                "name": "Noodles",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "Old Earth Cuisine 4",
+        "category": "Old Earth Cuisine"
+    },
+    {
+        "name": "Reuben",
+        "ingredients": [
+            {
+                "name": "Bread",
+                "quantity": 1
+            },
+            {
+                "name": "Cheese",
+                "quantity": 1
+            },
+            {
+                "name": "Red Meat",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "Old Earth Cuisine 1",
+        "category": "Old Earth Cuisine"
+    },
+    {
+        "name": "Spaghetti Carbonara",
+        "ingredients": [
+            {
+                "name": "Egg",
+                "quantity": 1
+            },
+            {
+                "name": "Noodles",
+                "quantity": 1
+            },
+            {
+                "name": "Nutrient",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "Old Earth Cuisine 2",
+        "category": "Old Earth Cuisine"
+    },
+    {
+        "name": "Alien Broth",
+        "ingredients": [
+            {
+                "name": "Fiber",
+                "quantity": 1
+            },
+            {
+                "name": "Nutrient",
+                "quantity": 1
+            },
+            {
+                "name": "Distilled Water",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "Beverage Development 3",
+        "category": "Beverage Development"
+    },
+    {
+        "name": "Alien Energy Drink",
+        "ingredients": [
+            {
+                "name": "Aromatic",
+                "quantity": 1
+            },
+            {
+                "name": "Metabolic Agent",
+                "quantity": 1
+            },
+            {
+                "name": "Distilled Water",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "Beverage Development 2",
+        "category": "Beverage Development"
+    },
+    {
+        "name": "Alien Tonic",
+        "ingredients": [
+            {
+                "name": "Fiber",
+                "quantity": 1
+            },
+            {
+                "name": "Aromatic",
+                "quantity": 1
+            },
+            {
+                "name": "Distilled Water",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "Beverage Development 1",
+        "category": "Beverage Development"
+    },
+    {
+        "name": "Boba Alien Tea",
+        "ingredients": [
+            {
+                "name": "Aromatic",
+                "quantity": 1
+            },
+            {
+                "name": "Membrane",
+                "quantity": 1
+            },
+            {
+                "name": "Distilled Water",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "Beverage Development 1",
+        "category": "Beverage Development"
+    },
+    {
+        "name": "Boom Pop! Dynamite",
+        "ingredients": [
+            {
+                "name": "Soda",
+                "quantity": 4
+            }
+        ],
+        "requiredResearch": "Beverage Development 4",
+        "category": "Beverage Development"
+    },
+    {
+        "name": "Bullet Coffee",
+        "ingredients": [
+            {
+                "name": "Coffee",
+                "quantity": 1
+            },
+            {
+                "name": "Butter",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "Beverage Development 3",
+        "category": "Beverage Development"
+    },
+    {
+        "name": "Chai Latte",
+        "ingredients": [
+            {
+                "name": "Tea",
+                "quantity": 1
+            },
+            {
+                "name": "Spice",
+                "quantity": 1
+            },
+            {
+                "name": "Dairy",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "Beverage Development 4",
+        "category": "Beverage Development"
+    },
+    {
+        "name": "Sunray Tonic",
+        "ingredients": [
+            {
+                "name": "Spice",
+                "quantity": 1
+            },
+            {
+                "name": "Boom Pop! Cherry",
+                "quantity": 1
+            },
+            {
+                "name": "Tea",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "Beverage Development 2",
+        "category": "Beverage Development"
+    },
+    {
+        "name": "Yellow Giant Splash",
+        "ingredients": [
+            {
+                "name": "Spice",
+                "quantity": 1
+            },
+            {
+                "name": "Peach",
+                "quantity": 1
+            },
+            {
+                "name": "Orange",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "Beverage Development 1",
+        "category": "Beverage Development"
+    },
+    {
+        "name": "Alien Liquor",
+        "ingredients": [
+            {
+                "name": "Nutrient",
+                "quantity": 1
+            },
+            {
+                "name": "Alkanes",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "Mixology 1",
+        "category": "Mixology"
+    },
+    {
+        "name": "Colonel's Choice",
+        "ingredients": [
+            {
+                "name": "Spice",
+                "quantity": 1
+            },
+            {
+                "name": "Bourbon",
+                "quantity": 1
+            },
+            {
+                "name": "CAN-uck! Poutine",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "Mixology 2",
+        "category": "Mixology"
+    },
+    {
+        "name": "Disastrous Shipwreck",
+        "ingredients": [
+            {
+                "name": "Liquor",
+                "quantity": 1
+            },
+            {
+                "name": "Soda",
+                "quantity": 1
+            },
+            {
+                "name": "Dairy",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "Mixology 3",
+        "category": "Mixology"
+    },
+    {
+        "name": "Fully-Loaded Bloody Mary",
+        "ingredients": [
+            {
+                "name": "Spice",
+                "quantity": 1
+            },
+            {
+                "name": "Liquor",
+                "quantity": 2
+            },
+            {
+                "name": "Tomato",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "Mixology 4",
+        "category": "Mixology"
+    },
+    {
+        "name": "Lumberjack Julep",
+        "ingredients": [
+            {
+                "name": "Liquor",
+                "quantity": 1
+            },
+            {
+                "name": "Aromatic",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "Mixology 2",
+        "category": "Mixology"
+    },
+    {
+        "name": "Very Heavy Water",
+        "ingredients": [
+            {
+                "name": "Liquor",
+                "quantity": 2
+            },
+            {
+                "name": "Soda",
+                "quantity": 2
+            }
+        ],
+        "requiredResearch": "Mixology 3",
+        "category": "Mixology"
+    },
+    {
+        "name": "Alien Kebabs",
+        "ingredients": [
+            {
+                "name": "Nutrient",
+                "quantity": 1
+            },
+            {
+                "name": "Spice",
+                "quantity": 1
+            },
+            {
+                "name": "Aromatic",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "Exotic Recipes 1",
+        "category": "Exotic Recipes"
+    },
+    {
+        "name": "Alien Pie",
+        "ingredients": [
+            {
+                "name": "Nutrient",
+                "quantity": 2
+            },
+            {
+                "name": "Spice",
+                "quantity": 1
+            },
+            {
+                "name": "Potato",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "Exotic Recipes 3",
+        "category": "Exotic Recipes"
+    },
+    {
+        "name": "Alien Stew",
+        "ingredients": [
+            {
+                "name": "Nutrient",
+                "quantity": 2
+            },
+            {
+                "name": "Distilled Water",
+                "quantity": 1
+            },
+            {
+                "name": "Aromatic",
+                "quantity": 1
+            },
+            {
+                "name": "Spice",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "Exotic Recipes 2",
+        "category": "Exotic Recipes"
+    },
+    {
+        "name": "Alien Stir Fry",
+        "ingredients": [
+            {
+                "name": "Noodles",
+                "quantity": 1
+            },
+            {
+                "name": "Nutrient",
+                "quantity": 1
+            },
+            {
+                "name": "Spice",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "Exotic Recipes 1",
+        "category": "Exotic Recipes"
+    },
+    {
+        "name": "Creature Jam",
+        "ingredients": [
+            {
+                "name": "Nutrient",
+                "quantity": 1
+            },
+            {
+                "name": "Aromatic",
+                "quantity": 1
+            },
+            {
+                "name": "Spice",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "Exotic Recipes 2",
+        "category": "Exotic Recipes"
+    },
+    {
+        "name": "Crispy Alien Nuggets",
+        "ingredients": [
+            {
+                "name": "Egg",
+                "quantity": 1
+            },
+            {
+                "name": "Nutrient",
+                "quantity": 1
+            },
+            {
+                "name": "Spice",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "Exotic Recipes 1",
+        "category": "Exotic Recipes"
+    },
+    {
+        "name": "Galaxy Lo Mein",
+        "ingredients": [
+            {
+                "name": "Quark-Degenerate Tissues",
+                "quantity": 1
+            },
+            {
+                "name": "Gastronomic Delight",
+                "quantity": 1
+            },
+            {
+                "name": "Noodles",
+                "quantity": 1
+            },
+            {
+                "name": "Nutrient",
+                "quantity": 1
+            },
+            {
+                "name": "Beans",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "Exotic Recipes 4",
+        "category": "Exotic Recipes"
+    },
+    {
+        "name": "Nebula Wat",
+        "ingredients": [
+            {
+                "name": "Quark-Degenerate Tissues",
+                "quantity": 1
+            },
+            {
+                "name": "Egg",
+                "quantity": 1
+            },
+            {
+                "name": "Butter",
+                "quantity": 1
+            },
+            {
+                "name": "Bread",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "Exotic Recipes 4",
+        "category": "Exotic Recipes"
+    },
+    {
+        "name": "Star Cluster Marsala",
+        "ingredients": [
+            {
+                "name": "Gastronomic Delight",
+                "quantity": 1
+            },
+            {
+                "name": "Wine",
+                "quantity": 1
+            },
+            {
+                "name": "Onion",
+                "quantity": 1
+            },
+            {
+                "name": "Potato",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "Exotic Recipes 3",
+        "category": "Exotic Recipes"
+    },
+    {
+        "name": "Stellar Kebabs",
+        "ingredients": [
+            {
+                "name": "Quark-Degenerate Tissues",
+                "quantity": 1
+            },
+            {
+                "name": "Aromatic",
+                "quantity": 1
+            },
+            {
+                "name": "Spice",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "Exotic Recipes 3",
+        "category": "Exotic Recipes"
+    },
+    {
+        "name": "Xenowurst",
+        "ingredients": [
+            {
+                "name": "Spice",
+                "quantity": 1
+            },
+            {
+                "name": "Nutrient",
+                "quantity": 1
+            },
+            {
+                "name": "Membrane",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "Exotic Recipes 2",
+        "category": "Exotic Recipes"
+    },
+    {
+        "name": "Astral Sliders",
+        "ingredients": [
+            {
+                "name": "Red Meat",
+                "quantity": 1
+            },
+            {
+                "name": "Cheese",
+                "quantity": 1
+            },
+            {
+                "name": "Bread",
+                "quantity": 1
+            },
+            {
+                "name": "Spice",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "",
+        "category": "Magazine Recipes"
+    },
+    {
+        "name": "Beer Brat Platter",
+        "ingredients": [
+            {
+                "name": "Poultry",
+                "quantity": 1
+            },
+            {
+                "name": "Beer",
+                "quantity": 1
+            },
+            {
+                "name": "Butter",
+                "quantity": 1
+            },
+            {
+                "name": "Bread",
+                "quantity": 1
+            },
+            {
+                "name": "Spice",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "",
+        "category": "Magazine Recipes"
+    },
+    {
+        "name": "Panache",
+        "ingredients": [
+            {
+                "name": "Meal Pack - Tofu",
+                "quantity": 1
+            },
+            {
+                "name": "Butter",
+                "quantity": 2
+            },
+            {
+                "name": "Spice",
+                "quantity": 1
+            },
+            {
+                "name": "Beans",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "",
+        "category": "Magazine Recipes"
+    },
+    {
+        "name": "Shepherd's Pie",
+        "ingredients": [
+            {
+                "name": "Red Meat",
+                "quantity": 1
+            },
+            {
+                "name": "Onion",
+                "quantity": 1
+            },
+            {
+                "name": "Carrot",
+                "quantity": 1
+            },
+            {
+                "name": "Potato",
+                "quantity": 1
+            },
+            {
+                "name": "Spice",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "",
+        "category": "Magazine Recipes"
+    },
+    {
+        "name": "The Deep",
+        "ingredients": [
+            {
+                "name": "Red Meat",
+                "quantity": 1
+            },
+            {
+                "name": "Potato",
+                "quantity": 1
+            },
+            {
+                "name": "Celery",
+                "quantity": 1
+            },
+            {
+                "name": "Carrot",
+                "quantity": 1
+            },
+            {
+                "name": "Spice",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "",
+        "category": "Magazine Recipes"
+    }
+]

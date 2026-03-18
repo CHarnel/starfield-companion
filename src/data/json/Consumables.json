@@ -7,6 +7,27 @@
         "effect": "Suppresses Addiction symptoms for 10m"
     },
     {
+        "name": "AddiJack",
+        "mass": " 0.10",
+        "value": "450",
+        "description": "A synthesis of addiction treatment Addichrone and cognitive enhancer NeuraJack.",
+        "effect": "Suppresses Addiction symptoms for 900s Research Projects require fewer resources for 900s +50% chance of Research Sudden Developments for 900s"
+    },
+    {
+        "name": "Alien Broth",
+        "mass": " 0.30",
+        "value": "105",
+        "description": "A dark, rich stock full of nutrition and energy. Often used for soup, or on its own as a snack for high-activity periods.",
+        "effect": "Restores 5 Health +10 O2 for 300s"
+    },
+    {
+        "name": "Alien Energy Drink",
+        "mass": " 0.30",
+        "value": "105",
+        "description": "Powerful beverage made from alien extracts, infused with caffeine. A favorite among space truckers.",
+        "effect": "+15% Movement Speed for 180s +10% O2 Recovery for 180s +10% CO2 Recovery Rate for 180s"
+    },
+    {
         "name": "Alien Genetic Material",
         "mass": " 1.00",
         "value": "1375",
@@ -28,11 +49,25 @@
         "effect": "Restores 12 Health +60 Energy Resistance for 8m"
     },
     {
+        "name": "Alien Kebabs",
+        "mass": " 0.30",
+        "value": "105",
+        "description": "Cubes of roasted alien meat, served skewered on a wooden stick, kebab style.",
+        "effect": "Restores 15 Health +75 Energy Resistance for 480s"
+    },
+    {
         "name": "Alien Liquor",
         "mass": " 0.30",
         "value": "165",
         "description": "Distilled alcohol, formed by fermenting certain alien plants.",
         "effect": "+8 Carry Capacity for 5m -25% 02 Recovery for 5m"
+    },
+    {
+        "name": "Alien Pie",
+        "mass": " 0.50",
+        "value": "185",
+        "description": "A tangy mixture of minced alien fruits, baked into a light, flaky crust.",
+        "effect": "Restores 20 Health +14 O2 for 720s"
     },
     {
         "name": "Alien Sandwich",
@@ -47,6 +82,20 @@
         "value": "185",
         "description": "A breakfast dish made from alien eggs and diced vegetables.",
         "effect": "Restores 4 Health +60 Damage Resistance for 5m"
+    },
+    {
+        "name": "Alien Stew",
+        "mass": " 0.50",
+        "value": "185",
+        "description": "A thick stew made from various alien meats and vegetables.",
+        "effect": "Restores 20 Health +100 Damage Resistance for 720s"
+    },
+    {
+        "name": "Alien Stir Fry",
+        "mass": " 0.50",
+        "value": "185",
+        "description": "Large chunks of alien meat seared in a skillet with vegetables, served over noodles.",
+        "effect": "Restores 15 Health +6 Carry Capacity for 300s"
     },
     {
         "name": "Alien Tea",
@@ -84,6 +133,20 @@
         "effect": "+150 Damage Resistance for 5m Treats Dislocated Limb, Fractured Limb, Fractured Skull, Sprain, and Torn Muscle."
     },
     {
+        "name": "Antibiotic Cocktail",
+        "mass": " 0.10",
+        "value": "415",
+        "description": "A mix of multiple antibiotics. Used for treating afflictions.",
+        "effect": "+20% 02 Recovery for 5m Treats Infections"
+    },
+    {
+        "name": "Antibiotic Injector",
+        "mass": " 0.10",
+        "value": "325",
+        "description": "Combines the effects of antibiotics and injectors into one package. Used for treating afflictions.",
+        "effect": "Treats Brain Injury, Concussion, Heatstroke, Hernia, Hypothermia, Infections, Lung Damage, Poisoning, and Radiation Poisoning"
+    },
+    {
         "name": "Antibiotic Paste",
         "mass": "0.10",
         "value": "430",
@@ -98,11 +161,18 @@
         "effect": "Treats infections"
     },
     {
-        "name": "Antibiotic Cocktail",
-        "mass": " 0.10",
-        "value": "415",
-        "description": "A mix of multiple antibiotics. Used for treating afflictions.",
-        "effect": "+20% 02 Recovery for 5m Treats Infections"
+        "name": "Astral Sliders",
+        "mass": " 0.50",
+        "value": "295",
+        "description": "A portion of miniature hamburgers.",
+        "effect": "Restores 15 Health"
+    },
+    {
+        "name": "Aurora",
+        "mass": " 0.10",
+        "value": "760",
+        "description": "A powerful and addictive hallucinogen derived from Volii Alpha's local Chasmbass population. Legal only in the city of Neon.",
+        "effect": "Slows time by 40% for 10s"
     },
     {
         "name": "Baguette",
@@ -119,11 +189,32 @@
         "effect": "Treats Contusions, Lacerations, and Puncture Wounds."
     },
     {
+        "name": "Barbacoa Wrap",
+        "mass": " 0.50",
+        "value": "185",
+        "description": "Slow-braised beef and vegetables, served sandwich-style in a corn tortilla.",
+        "effect": "Restores 20 Health +100 Damage Resistance for 600s"
+    },
+    {
         "name": "Battlestim",
         "mass": " 0.10",
         "value": "525",
         "description": "A chem designed to improve pain",
         "effect": "+250 Damage Resistance for 5m"
+    },
+    {
+        "name": "BattleUp",
+        "mass": " 0.10",
+        "value": "450",
+        "description": "A popular cocktail of the chems Infantry Alpha and BattleStim, improving pain tolerance and aiming precision.",
+        "effect": "+40% Ranged Damage for 180s +25% Weapon Accuracy for 180s +300 Damage Resistance for 180s"
+    },
+    {
+        "name": "Beer Brat Platter",
+        "mass": " 0.50",
+        "value": "350",
+        "description": "Bratwurst links boiled in beer then grilled. Served with toast.",
+        "effect": "Restores 15 Health +14 O2 for 600s"
     },
     {
         "name": "Beertini",
@@ -138,6 +229,13 @@
         "value": "75",
         "description": "A salami and cheese sandwich. Clearly delicious, as evidenced by the large bite taken out of it.",
         "effect": "Restores 3 Health"
+    },
+    {
+        "name": "Black Hole Heart",
+        "mass": " 0.10",
+        "value": "0",
+        "description": "",
+        "effect": "+20000% Power Recovery for 10s Slows time by 25% for 10s +35% Movement Speed for 10s"
     },
     {
         "name": "Blend",
@@ -159,6 +257,13 @@
         "value": "75",
         "description": "Black licorice-flavored Boom Pop! soda.",
         "effect": "Restores 2 Health +8% 02 Recovery for 3m"
+    },
+    {
+        "name": "Boom Pop! Dynamite",
+        "mass": " 0.30",
+        "value": "155",
+        "description": "Several flavors of Boom Pop! combined into one powerful mixture.",
+        "effect": "+20% Reload Speed for 60s +20% Movement Speed for 180s +25% O2 Recovery for 180s +25% CO2 Recovery Rate for 180s"
     },
     {
         "name": "Boom Pop! Orange",
@@ -196,18 +301,18 @@
         "effect": "+6 Carry Capacity for 5m -25% 02 Recovery for 5m"
     },
     {
+        "name": "Bullet Coffee",
+        "mass": " 0.30",
+        "value": "140",
+        "description": "Coffee with butter - a ketogenic classic.",
+        "effect": "Restores 5 Health +20% O2 Recovery for 180s +20% CO2 Recovery Rate for 180s"
+    },
+    {
         "name": "Butter",
         "mass": " 0.30",
         "value": "55",
         "description": "Bostaurus Laboratories' finest butter, unsalted.",
         "effect": "Restores 2 Health"
-    },
-    {
-        "name": "Carrot",
-        "mass": " 0.20",
-        "value": "35",
-        "description": "The nutritious, delicious carrot. Long considered the favorite food of Earth rabbits.",
-        "effect": "Restores 1 Health"
     },
     {
         "name": "Can-uck! Bacon",
@@ -238,11 +343,25 @@
         "effect": "Restores 4 Health"
     },
     {
+        "name": "Carrot",
+        "mass": " 0.20",
+        "value": "35",
+        "description": "The nutritious, delicious carrot. Long considered the favorite food of Earth rabbits.",
+        "effect": "Restores 1 Health"
+    },
+    {
         "name": "Celery",
         "mass": " 0.20",
         "value": "35",
         "description": "A stalk of celery. Especially delicious when paired with synthetic peanut butter.",
         "effect": "Restores 1 Health"
+    },
+    {
+        "name": "Chai Latte",
+        "mass": " 0.30",
+        "value": "155",
+        "description": "Strong black tea and intense spices, mixed with milk and sugar and topped with a sweet foam.",
+        "effect": "Restores 10 Health +15 O2 for 300s +20% O2 Recovery for 300s +20% CO2 Recovery Rate for 300s"
     },
     {
         "name": "Chandra Cabernet Sauvignon",
@@ -287,6 +406,13 @@
         "effect": "+9% Persuasion chance for 5m -15% 02 Recovery for 5m"
     },
     {
+        "name": "Chapaguri",
+        "mass": " 0.50",
+        "value": "185",
+        "description": "A savory noodle dish served with steak. Often enjoyed as a snack, and considered a comfort food.",
+        "effect": "Restores 20 Health +2% XP Gain for 1800s"
+    },
+    {
         "name": "Cheddar Snack Crackers",
         "mass": " 0.30",
         "value": "90",
@@ -299,6 +425,20 @@
         "value": "55",
         "description": "Bostaurus Laboratories' finest cheese. Extra sharp.",
         "effect": "Restores 2 Health"
+    },
+    {
+        "name": "Chicken Marsala",
+        "mass": " 0.50",
+        "value": "185",
+        "description": "Pan-fried chicken cutlets and mushrooms in a rich wine sauce.",
+        "effect": "Restores 15 Health +8 Carry Capacity for 300s"
+    },
+    {
+        "name": "Chicken Tikka",
+        "mass": " 0.50",
+        "value": "185",
+        "description": "Yogurt-marinated chicken baked over charcoal.",
+        "effect": "Restores 20 Health +14 O2 for 600s"
     },
     {
         "name": "Chunks Apple",
@@ -357,6 +497,13 @@
         "effect": "+80 Damage Resistance for 3m -15% 02 Recovery for 3m"
     },
     {
+        "name": "Colonel's Choice",
+        "mass": " 0.30",
+        "value": "350",
+        "description": "A spiced cocktail of bourbon and gravy. Pairs well with fried meats, particularly with synthetic chicken.",
+        "effect": "Restores 5 Health +12 Carry Capacity for 300s +20% O2 Recovery for 300s +20% CO2 Recovery Rate for 300s"
+    },
+    {
         "name": "Container of Cereal",
         "mass": " 0.30",
         "value": "70",
@@ -369,6 +516,27 @@
         "value": "525",
         "description": "A chem used to enhance close quarters combat effectiveness.",
         "effect": "+25% Melee Damage for 5m"
+    },
+    {
+        "name": "Creature Jam",
+        "mass": " 0.50",
+        "value": "140",
+        "description": "A jar of chunky jam made from alien meat, fruit, and unrefined sugar.",
+        "effect": "Restores 15 Health +100 Energy Resistance for 480s"
+    },
+    {
+        "name": "Crispy Alien Nuggets",
+        "mass": " 0.30",
+        "value": "140",
+        "description": "Battered and fried nuggets of some unknown alien meat. Often served with a dipping sauce.",
+        "effect": "Restores 10 Health"
+    },
+    {
+        "name": "Dal Makhani",
+        "mass": " 0.50",
+        "value": "185",
+        "description": "Slow-stewed and reduced lentils in a mix of spices and herbs.",
+        "effect": "Restores 25 Health +125 Damage Resistance for 600s"
     },
     {
         "name": "Dark Lager",
@@ -385,11 +553,25 @@
         "effect": "Restores 12 Health +11 02 for 10m"
     },
     {
+        "name": "Disastrous Shipwreck",
+        "mass": " 0.30",
+        "value": "350",
+        "description": "A cocktail of soda, dark rum, and cr�me de menthe, with a pinch of gunpowder.",
+        "effect": "+100 Damage Resistance for 300s +20 O2 for 300s +20% O2 Recovery for 300s +20% CO2 Recovery Rate for 300s"
+    },
+    {
         "name": "Distilled Water",
         "mass": " 0.30",
         "value": "45",
         "description": "Water purified by reverse osmosis.",
         "effect": "Restores 2 Health Actions use -16% 02 for 3m"
+    },
+    {
+        "name": "Doro Wat",
+        "mass": " 0.50",
+        "value": "185",
+        "description": "A very rich, very spicy chicken stew. Often topped with a boiled egg.",
+        "effect": "Restores 25 Health +18 O2 for 600s"
     },
     {
         "name": "Drink Pack: Beer",
@@ -441,6 +623,13 @@
         "effect": "+8% Persuasion chance for 3m -15% 02 Recovery for 3m"
     },
     {
+        "name": "Dwarf Star Heart",
+        "mass": " 0.10",
+        "value": "380",
+        "description": "A strange, homemade chem concoction known for its energizing properties.",
+        "effect": "+50% Power Recovery for 300s +250 Damage Resistance for 300s +250 Energy Resistance for 300s"
+    },
+    {
         "name": "Erdebrau Dark Can",
         "mass": " 0.50",
         "value": "155",
@@ -488,6 +677,34 @@
         "value": "75",
         "description": "Fried and spiced alien worms. Guaranteed safe, and loaded with protein.",
         "effect": "Restores 4 Health"
+    },
+    {
+        "name": "Fully-Loaded Bloody Mary",
+        "mass": " 0.30",
+        "value": "350",
+        "description": "Vodka and spiced tomato puree.",
+        "effect": "Restores 15 Health +25 O2 for 300s +125 Damage Resistance for 300s -25% O2 Recovery for 300s"
+    },
+    {
+        "name": "Galaxy Lo Mein",
+        "mass": " 0.10",
+        "value": "0",
+        "description": "",
+        "effect": "Restores 25 Health +200 Damage Resistance for 720s +200 Energy Resistance for 720s"
+    },
+    {
+        "name": "Giant Heart",
+        "mass": " 0.10",
+        "value": "525",
+        "description": "A strange, homemade chem concoction that energizes and improves pain tolerance.",
+        "effect": "+75% Power Recovery for 300s +350 Damage Resistance for 300s +350 Energy Resistance for 300s"
+    },
+    {
+        "name": "Grandpa's Meatloaf",
+        "mass": " 0.50",
+        "value": "240",
+        "description": "Mouthwatering meatloaf made using your grandfather's award winning recipe.",
+        "effect": "Restores 25 Health +125 Damage Resistance for 600s +2% XP Gain for 7200s"
     },
     {
         "name": "Grapes",
@@ -539,6 +756,13 @@
         "effect": "+20% Persuasion chance for 5m"
     },
     {
+        "name": "Hypergiant Heart",
+        "mass": " 0.10",
+        "value": "665",
+        "description": "A strange, homemade chem concoction that energizes and improves pain tolerance.",
+        "effect": "+100% Power Recovery for 300s +500 Damage Resistance for 300s +500 Energy Resistance for 300s"
+    },
+    {
         "name": "Immobilizer",
         "mass": " 0.1",
         "value": "50",
@@ -576,6 +800,13 @@
     {
         "name": "Junk Flesh",
         "mass": " 0.10",
+        "value": "665",
+        "description": "Purges the body of addictions.",
+        "effect": "Cures all Addictions"
+    },
+    {
+        "name": "Junk Flush",
+        "mass": " 0.10",
         "value": "665",
         "description": "Purges the body of addictions.",
         "effect": "Cures all Addictions"
@@ -621,6 +852,13 @@
         "value": "1160",
         "description": "Several liver pate tartlets, served with a rich pea soup.",
         "effect": "Restore 12 Health +8% 02 Recovery for 10m"
+    },
+    {
+        "name": "Lumberjack Julep",
+        "mass": " 0.30",
+        "value": "350",
+        "description": "A classic mint julep that substitutes maple syrup for mint.",
+        "effect": "Restores 10 Health +100 Damage Resistance for 300s +20% O2 Recovery for 300s +20% CO2 Recovery Rate for 300s"
     },
     {
         "name": "Marshmallow Treat Cereal",
@@ -721,6 +959,13 @@
         "effect": "Restore 4 Health"
     },
     {
+        "name": "Nebula Wat",
+        "mass": " 0.10",
+        "value": "0",
+        "description": "",
+        "effect": "Restores 25 Health +12% Movement Speed for 720s +150 Damage Resistance for 720s"
+    },
+    {
         "name": "Neurajack",
         "mass": " 0.10",
         "value": "450",
@@ -728,17 +973,17 @@
         "effect": "Research Projects require fewer resources for 10m +50% chance of Research Sudden Developments for 10m"
     },
     {
+        "name": "O2 Shot",
+        "mass": " 0.10",
+        "value": "450",
+        "description": "An injection of hyperoxygenated serum that greatly improves circulatory function.",
+        "effect": "+500% O2 Recovery for 2s +500% CO2 Recovery Rate for 2s"
+    },
+    {
         "name": "Onion",
         "mass": " 0.20",
         "value": "35",
         "description": "A common yellow onion. Delicious sauteed and in soups.",
-        "effect": "Restores 1 Health"
-    },
-    {
-        "name": "Orange",
-        "mass": "??",
-        "value": "??",
-        "description": "Sweet and delicious. Grown from seeds originally harvested from Earth.",
         "effect": "Restores 1 Health"
     },
     {
@@ -749,6 +994,13 @@
         "effect": "Restore 4 Health"
     },
     {
+        "name": "Orange",
+        "mass": "??",
+        "value": "??",
+        "description": "Sweet and delicious. Grown from seeds originally harvested from Earth.",
+        "effect": "Restores 1 Health"
+    },
+    {
         "name": "Pale Ale",
         "mass": " 0.50",
         "value": "155",
@@ -756,11 +1008,39 @@
         "effect": "+40 Damage Resistance for 3m -10% 02 Recovery for 3m"
     },
     {
+        "name": "Panacea",
+        "mass": " 0.10",
+        "value": "740",
+        "description": "A complete system purge, removing diseases and poisons and treating injuries of any sort. Very tiring to use.",
+        "effect": "Treats all Afflictions Completely drains O2"
+    },
+    {
         "name": "Panache",
         "mass": " 0.50",
         "value": "885",
         "description": "A flamboyant array of four different foods, prepared as formed balls and dusted with red pepper.",
         "effect": "Restores 8 Health +8% 02 Recovery for 5m"
+    },
+    {
+        "name": "Panopticon",
+        "mass": " 0.10",
+        "value": "450",
+        "description": "An experimental synthesis of the chems Reconstim and Infantry Alpha.",
+        "effect": "+40% Ranged Damage for 180s +35% Weapon Accuracy for 180s -50% Movement Noise for 180s"
+    },
+    {
+        "name": "Pappardelle Bolognese",
+        "mass": " 0.50",
+        "value": "185",
+        "description": "Broad, long ribbons of pasta served in a meaty red sauce.",
+        "effect": "Restores 25 Health +2% XP Gain for 3600s"
+    },
+    {
+        "name": "Paramour",
+        "mass": " 0.10",
+        "value": "525",
+        "description": "An enhancement to the chem Hippolyta, designed to push cognition beyond normal limits.",
+        "effect": "Companion Affinity increases faster for 600s +25% Persuasion chance for 600s"
     },
     {
         "name": "Patty Melt",
@@ -931,11 +1211,39 @@
         "effect": "+40% Melee Damage for 3m +300 Damage Resistance for 3m"
     },
     {
+        "name": "RedAMP",
+        "mass": " 0.10",
+        "value": "450",
+        "description": "A fusion of the chems Red Trench and Amp, improving close combat and general athletics.",
+        "effect": "+50% Melee Damage for 120s +50% Movement Speed for 120s 2x Jump Height for 120s +400 Damage Resistance for 120s"
+    },
+    {
+        "name": "Repairing Immobilizer",
+        "mass": " 0.10",
+        "value": "400",
+        "description": "Combines bandages and an immobilizer to treat afflictions.",
+        "effect": "Treats Contusions, Dislocated Limb, Fractured Limb, Fractured Skull, Lacerations, Puncture Wounds, Sprain, and Torn Muscle"
+    },
+    {
+        "name": "Reuben",
+        "mass": " 0.50",
+        "value": "140",
+        "description": "A sandwich that combines corned beef, cheese, sauerkraut, and other ingredients. Typically served on rye bread.",
+        "effect": "Restores 10 Health +10 O2 for 480s"
+    },
+    {
         "name": "Ruben",
         "mass": " 0.50",
         "value": "140",
         "description": "A sandwich that combines corned beef, cheese, sauerkraut, and other ingredients. Typically served on rye bread.",
         "effect": "Restores 8 Health +8 02 for 8m"
+    },
+    {
+        "name": "S.T.E.V.E.",
+        "mass": " 0.10",
+        "value": "450",
+        "description": "A cocktail made from Aurora and the chem Panopticon. Dilates perception of time and improves hand-eye coordination.",
+        "effect": "Slows time by 40% for 10s +40% Ranged Damage for 10s +50% Weapon Accuracy for 10s"
     },
     {
         "name": "Sandwich",
@@ -950,6 +1258,13 @@
         "value": "75",
         "description": "A snack of dried alien seaweed. Seasoned and dusted with sesame seeds. Snack-sized.",
         "effect": "Restores 2 Health"
+    },
+    {
+        "name": "Shepherd's Pie",
+        "mass": " 0.50",
+        "value": "295",
+        "description": "Tavern-style shepherd's pie, with braised meat and roast vegetables under mashed potatoes.",
+        "effect": "Restores 15 Health +2% XP Gain for 3600s"
     },
     {
         "name": "Ship Parts",
@@ -1043,6 +1358,34 @@
         "effect": "+20% Damage for 2m +20% Movement Speed for 2m"
     },
     {
+        "name": "Star Cluster Marsala",
+        "mass": " 0.10",
+        "value": "0",
+        "description": "",
+        "effect": "Restores 20 Health +15 Carry Capacity for 720s +175 Damage Resistance for 720s"
+    },
+    {
+        "name": "Stellar Kebabs",
+        "mass": " 0.10",
+        "value": "0",
+        "description": "",
+        "effect": "Restores 20 Health +175 Energy Resistance for 720s +20% O2 Recovery for 720s +20% CO2 Recovery Rate for 720s"
+    },
+    {
+        "name": "Subgiant Heart",
+        "mass": " 0.10",
+        "value": "450",
+        "description": "A strange, homemade chem concoction known for its energizing properties.",
+        "effect": "+300% Power Recovery for 10s Slows time by 35% for 10s +40% Damage for 10s +50% Movement Speed for 10s"
+    },
+    {
+        "name": "Sunray Tonic",
+        "mass": " 0.30",
+        "value": "140",
+        "description": "Tea-infused tonic water, cherry soda, and spices.",
+        "effect": "Restores 5 Health +2% XP Gain for 1800s +10% O2 Recovery for 180s +10% CO2 Recovery Rate for 180s"
+    },
+    {
         "name": "Superfood Paste Kit",
         "mass": " 0.50",
         "value": "140",
@@ -1055,6 +1398,13 @@
         "value": "140",
         "description": "A full pack of various superfood paste items. Will sustain life, but known to taste like sewage.",
         "effect": "Restores 8 Health"
+    },
+    {
+        "name": "Supermassive Black Heart",
+        "mass": " 0.10",
+        "value": "0",
+        "description": "",
+        "effect": "+50000% Power Recovery for 10s Slows time by 50% for 10s +50% Damage for 10s +75% Movement Speed for 10s"
     },
     {
         "name": "Supernova",
@@ -1120,39 +1470,11 @@
         "effect": "Restores 2 Health"
     },
     {
-        "name": "UC Battlemeal",
-        "mass": " 0.50",
-        "value": "210",
-        "description": "A standard United Colonies field ration.",
-        "effect": "Restores 12 Health +4 Carry Capacity for 5m"
-    },
-    {
-        "name": "UC Battlemeal Multipack",
-        "mass": " 1.50",
-        "value": "350",
-        "description": "Standard United Colonies field rations Packaged in bulk.",
-        "effect": "Restores 16 Health +5 Carry Capacity for 8m"
-    },
-    {
-        "name": "Udon Multipack",
-        "mass": " 1.50",
-        "value": "155",
-        "description": "Oishii brand udon noodles. Packaged in bulk.",
-        "effect": "Restores 8 Health"
-    },
-    {
         "name": "Ta'Ameya Pita",
         "mass": " 0.50",
         "value": "295",
         "description": "Two falafel-stuffed flatbreads, drizzled with yogurt sauce.",
         "effect": "Restore 12 Health"
-    },
-    {
-        "name": "TerraBrew Classic",
-        "mass": "??",
-        "value": "75",
-        "description": "TerraBrew's original, medium roast",
-        "effect": "Restores 2 Health +14% 02 Recovery for 3m"
     },
     {
         "name": "TerraBrew Cappuccino",
@@ -1162,10 +1484,10 @@
         "effect": "Effect/s"
     },
     {
-        "name": "TerraBrew Latte",
-        "mass": " 0.30",
+        "name": "TerraBrew Classic",
+        "mass": "??",
         "value": "75",
-        "description": "TerraBrew's original cafe latte.",
+        "description": "TerraBrew's original, medium roast",
         "effect": "Restores 2 Health +14% 02 Recovery for 3m"
     },
     {
@@ -1174,6 +1496,13 @@
         "value": "75",
         "description": " TerraBrew's strong, Italian-style coffee.",
         "effect": "Restores 2 Health +16% O2 Recovery for 3m"
+    },
+    {
+        "name": "TerraBrew Latte",
+        "mass": " 0.30",
+        "value": "75",
+        "description": "TerraBrew's original cafe latte.",
+        "effect": "Restores 2 Health +14% 02 Recovery for 3m"
     },
     {
         "name": "The Deep",
@@ -1218,11 +1547,39 @@
         "effect": "Restores 12 Health"
     },
     {
+        "name": "UC Battlemeal",
+        "mass": " 0.50",
+        "value": "210",
+        "description": "A standard United Colonies field ration.",
+        "effect": "Restores 12 Health +4 Carry Capacity for 5m"
+    },
+    {
+        "name": "UC Battlemeal Multipack",
+        "mass": " 1.50",
+        "value": "350",
+        "description": "Standard United Colonies field rations Packaged in bulk.",
+        "effect": "Restores 16 Health +5 Carry Capacity for 8m"
+    },
+    {
         "name": "Udon Minibite",
         "mass": "??",
         "value": "??",
         "description": "Oishii brand udon noodles. Snack-",
         "effect": "Restores 2 Health"
+    },
+    {
+        "name": "Udon Multipack",
+        "mass": " 1.50",
+        "value": "155",
+        "description": "Oishii brand udon noodles. Packaged in bulk.",
+        "effect": "Restores 8 Health"
+    },
+    {
+        "name": "Unprocessed Aurora",
+        "mass": " 0.10",
+        "value": "0",
+        "description": "An unprocessed version of the powerful hallucinogen derived from Neon's local chasmbass population.",
+        "effect": "Restores 5 Health/s for 10s"
     },
     {
         "name": "Veggie Grinder",
@@ -1232,11 +1589,32 @@
         "effect": "Restore 12 Health"
     },
     {
+        "name": "Very Heavy Water",
+        "mass": " 0.30",
+        "value": "350",
+        "description": "A mixed cocktail of several different hard liquors and various flavors of soda.",
+        "effect": "+100 Damage Resistance for 180s +12 Carry Capacity for 300s -25% O2 Recovery for 300s"
+    },
+    {
         "name": "Watermelon",
         "mass": " 0.50",
         "value": "35",
         "description": "Once a favorite of Earth summertime barbecues. Now synthetically grown.",
         "effect": "Restores 2 Health"
+    },
+    {
+        "name": "Whiteout",
+        "mass": " 0.10",
+        "value": "525",
+        "description": "An unstable, refined form of the chem Squall. Dangerously addictive and associated with unchecked aggression.",
+        "effect": "+25% Damage for 120s +35% Movement Speed for 120s"
+    },
+    {
+        "name": "Xenowurst",
+        "mass": " 0.50",
+        "value": "105",
+        "description": "Sausages made from seasoned alien meat.",
+        "effect": "Restores 15 Health +10% O2 Recovery for 480s +10% CO2 Recovery Rate for 480s"
     },
     {
         "name": "Yellow Giant Splash",

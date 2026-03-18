@@ -1,0 +1,706 @@
+[
+    {
+        "name": "Aurora",
+        "ingredients": [
+            {
+                "name": "Chasmbass Oil",
+                "quantity": 1
+            },
+            {
+                "name": "Benzene",
+                "quantity": 1
+            },
+            {
+                "name": "Stimulant",
+                "quantity": 1
+            },
+            {
+                "name": "Hallucinogen",
+                "quantity": 2
+            }
+        ],
+        "requiredResearch": "",
+        "category": "Basic"
+    },
+    {
+        "name": "Junk Flush",
+        "ingredients": [
+            {
+                "name": "Trauma Pack",
+                "quantity": 1
+            },
+            {
+                "name": "Immunostimulant",
+                "quantity": 1
+            },
+            {
+                "name": "Toxin",
+                "quantity": 2
+            }
+        ],
+        "requiredResearch": "",
+        "category": "Basic"
+    },
+    {
+        "name": "Panacea",
+        "ingredients": [
+            {
+                "name": "Emergency Kit",
+                "quantity": 1
+            },
+            {
+                "name": "Heart+",
+                "quantity": 1
+            },
+            {
+                "name": "Immunostimulant",
+                "quantity": 1
+            },
+            {
+                "name": "Carboxylic Acids",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "",
+        "category": "Basic"
+    },
+    {
+        "name": "Penicillin X",
+        "ingredients": [
+            {
+                "name": "Membrane",
+                "quantity": 1
+            },
+            {
+                "name": "Metabolic Agent",
+                "quantity": 1
+            },
+            {
+                "name": "Antimicrobial",
+                "quantity": 2
+            }
+        ],
+        "requiredResearch": "",
+        "category": "Basic"
+    },
+    {
+        "name": "Snake Oil",
+        "ingredients": [
+            {
+                "name": "Chlorine",
+                "quantity": 1
+            },
+            {
+                "name": "Sedative",
+                "quantity": 1
+            },
+            {
+                "name": "Metabolic Agent",
+                "quantity": 2
+            }
+        ],
+        "requiredResearch": "",
+        "category": "Basic"
+    },
+    {
+        "name": "Unprocessed Aurora",
+        "ingredients": [
+            {
+                "name": "Hallucinogen",
+                "quantity": 2
+            },
+            {
+                "name": "Stimulant",
+                "quantity": 1
+            },
+            {
+                "name": "Benzene",
+                "quantity": 1
+            },
+            {
+                "name": "Chasmbass Oil",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "",
+        "category": "Basic"
+    },
+    {
+        "name": "Analgesic Poultice",
+        "ingredients": [
+            {
+                "name": "Antibiotics",
+                "quantity": 1
+            },
+            {
+                "name": "Heal Paste",
+                "quantity": 1
+            },
+            {
+                "name": "Bandages",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "Medical Treatment 2",
+        "category": "Medical Treatment"
+    },
+    {
+        "name": "Antibiotic Injector",
+        "ingredients": [
+            {
+                "name": "Antibiotics",
+                "quantity": 1
+            },
+            {
+                "name": "Injector",
+                "quantity": 1
+            },
+            {
+                "name": "Analgesic",
+                "quantity": 2
+            }
+        ],
+        "requiredResearch": "Medical Treatment 3",
+        "category": "Medical Treatment"
+    },
+    {
+        "name": "Antibiotic Paste",
+        "ingredients": [
+            {
+                "name": "Antibiotics",
+                "quantity": 1
+            },
+            {
+                "name": "Heal Paste",
+                "quantity": 1
+            },
+            {
+                "name": "Carboxylic Acids",
+                "quantity": 2
+            }
+        ],
+        "requiredResearch": "Medical Treatment 1",
+        "category": "Medical Treatment"
+    },
+    {
+        "name": "Antibiotics",
+        "ingredients": [
+            {
+                "name": "Antimicrobial",
+                "quantity": 1
+            },
+            {
+                "name": "Membrane",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "",
+        "category": "Medical Treatment"
+    },
+    {
+        "name": "Bandages",
+        "ingredients": [
+            {
+                "name": "Fiber",
+                "quantity": 1
+            },
+            {
+                "name": "Sealant",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "",
+        "category": "Medical Treatment"
+    },
+    {
+        "name": "Boudicca",
+        "ingredients": [
+            {
+                "name": "Analgesic",
+                "quantity": 2
+            },
+            {
+                "name": "Penicillin X",
+                "quantity": 1
+            },
+            {
+                "name": "Battlestim",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "Medical Treatment 2",
+        "category": "Medical Treatment"
+    },
+    {
+        "name": "Heal Paste",
+        "ingredients": [
+            {
+                "name": "Membrane",
+                "quantity": 1
+            },
+            {
+                "name": "Analgesic",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "",
+        "category": "Medical Treatment"
+    },
+    {
+        "name": "Immobilizer",
+        "ingredients": [
+            {
+                "name": "Sealant",
+                "quantity": 1
+            },
+            {
+                "name": "Structural",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "",
+        "category": "Medical Treatment"
+    },
+    {
+        "name": "Infused Bandages",
+        "ingredients": [
+            {
+                "name": "Heal Paste",
+                "quantity": 1
+            },
+            {
+                "name": "Bandages",
+                "quantity": 1
+            },
+            {
+                "name": "Sedative",
+                "quantity": 2
+            }
+        ],
+        "requiredResearch": "Medical Treatment 1",
+        "category": "Medical Treatment"
+    },
+    {
+        "name": "Injector",
+        "ingredients": [
+            {
+                "name": "Metabolic Agent",
+                "quantity": 1
+            },
+            {
+                "name": "Membrane",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "",
+        "category": "Medical Treatment"
+    },
+    {
+        "name": "Pick-Me-Up",
+        "ingredients": [
+            {
+                "name": "Aqueous Hematite",
+                "quantity": 2
+            },
+            {
+                "name": "Membrane",
+                "quantity": 1
+            },
+            {
+                "name": "Metabolic Agent",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "",
+        "category": "Medical Treatment"
+    },
+    {
+        "name": "Repairing Immobilizer",
+        "ingredients": [
+            {
+                "name": "Bandages",
+                "quantity": 1
+            },
+            {
+                "name": "Immobilizer",
+                "quantity": 1
+            },
+            {
+                "name": "Biosuppressant",
+                "quantity": 2
+            }
+        ],
+        "requiredResearch": "Medical Treatment 3",
+        "category": "Medical Treatment"
+    },
+    {
+        "name": "Amp",
+        "ingredients": [
+            {
+                "name": "Argon",
+                "quantity": 2
+            },
+            {
+                "name": "Toxin",
+                "quantity": 1
+            },
+            {
+                "name": "Metabolic Agent",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "Performance Enhancement 1",
+        "category": "Performance Enhancement"
+    },
+    {
+        "name": "Frostwolf",
+        "ingredients": [
+            {
+                "name": "Whiteout",
+                "quantity": 1
+            },
+            {
+                "name": "Reconstim",
+                "quantity": 1
+            },
+            {
+                "name": "Tetrafluorides",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "Performance Enhancement 3",
+        "category": "Performance Enhancement"
+    },
+    {
+        "name": "Neurajack",
+        "ingredients": [
+            {
+                "name": "Neurologic",
+                "quantity": 1
+            },
+            {
+                "name": "Synapse Alpha",
+                "quantity": 1
+            },
+            {
+                "name": "Reconstim",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "Performance Enhancement 3",
+        "category": "Performance Enhancement"
+    },
+    {
+        "name": "Panopticon",
+        "ingredients": [
+            {
+                "name": "Reconstim",
+                "quantity": 1
+            },
+            {
+                "name": "Infantry Alpha",
+                "quantity": 1
+            },
+            {
+                "name": "Carboxylic Acids",
+                "quantity": 2
+            },
+            {
+                "name": "Chlorine",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "Performance Enhancement 2",
+        "category": "Performance Enhancement"
+    },
+    {
+        "name": "Paramour",
+        "ingredients": [
+            {
+                "name": "Synapse Alpha",
+                "quantity": 1
+            },
+            {
+                "name": "Hippolyta",
+                "quantity": 1
+            },
+            {
+                "name": "Hypercatalyst",
+                "quantity": 2
+            }
+        ],
+        "requiredResearch": "Performance Enhancement 2",
+        "category": "Performance Enhancement"
+    },
+    {
+        "name": "Red Trench",
+        "ingredients": [
+            {
+                "name": "CQB-X",
+                "quantity": 1
+            },
+            {
+                "name": "Battlestim",
+                "quantity": 1
+            },
+            {
+                "name": "Tetrafluorides",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "Performance Enhancement 1",
+        "category": "Performance Enhancement"
+    },
+    {
+        "name": "Whiteout",
+        "ingredients": [
+            {
+                "name": "Squall",
+                "quantity": 2
+            },
+            {
+                "name": "Stimulant",
+                "quantity": 1
+            },
+            {
+                "name": "Toxin",
+                "quantity": 3
+            }
+        ],
+        "requiredResearch": "Performance Enhancement 3",
+        "category": "Performance Enhancement"
+    },
+    {
+        "name": "Black Hole Heart",
+        "ingredients": [
+            {
+                "name": "Alien Genetic Material",
+                "quantity": 1
+            },
+            {
+                "name": "Caelumite",
+                "quantity": 1
+            },
+            {
+                "name": "Solvent",
+                "quantity": 3
+            },
+            {
+                "name": "Tetrafluorides",
+                "quantity": 3
+            }
+        ],
+        "requiredResearch": "Innovative Synthesis 1",
+        "category": "Innovative Synthesis"
+    },
+    {
+        "name": "Dwarf Star Heart",
+        "ingredients": [
+            {
+                "name": "Alien Genetic Material",
+                "quantity": 1
+            },
+            {
+                "name": "Caelumite",
+                "quantity": 1
+            },
+            {
+                "name": "Mercury",
+                "quantity": 3
+            },
+            {
+                "name": "Carboxylic Acids",
+                "quantity": 3
+            }
+        ],
+        "requiredResearch": "Innovative Synthesis 1",
+        "category": "Innovative Synthesis"
+    },
+    {
+        "name": "Giant Heart",
+        "ingredients": [
+            {
+                "name": "Alien Genetic Material",
+                "quantity": 1
+            },
+            {
+                "name": "Dwarf Star Heart",
+                "quantity": 1
+            },
+            {
+                "name": "Caelumite",
+                "quantity": 1
+            },
+            {
+                "name": "Hypercatalyst",
+                "quantity": 3
+            }
+        ],
+        "requiredResearch": "Innovative Synthesis 2",
+        "category": "Innovative Synthesis"
+    },
+    {
+        "name": "Hypergiant Heart",
+        "ingredients": [
+            {
+                "name": "Alien Genetic Material",
+                "quantity": 1
+            },
+            {
+                "name": "Subgiant Heart",
+                "quantity": 1
+            },
+            {
+                "name": "Caelumite",
+                "quantity": 1
+            },
+            {
+                "name": "Stimulant",
+                "quantity": 3
+            }
+        ],
+        "requiredResearch": "Innovative Synthesis 3",
+        "category": "Innovative Synthesis"
+    },
+    {
+        "name": "Subgiant Heart",
+        "ingredients": [
+            {
+                "name": "Alien Genetic Material",
+                "quantity": 1
+            },
+            {
+                "name": "Black Hole Heart",
+                "quantity": 1
+            },
+            {
+                "name": "Caelumite",
+                "quantity": 1
+            },
+            {
+                "name": "Solvent",
+                "quantity": 3
+            }
+        ],
+        "requiredResearch": "Innovative Synthesis 2",
+        "category": "Innovative Synthesis"
+    },
+    {
+        "name": "Supermassive Black Heart",
+        "ingredients": [
+            {
+                "name": "Alien Genetic Material",
+                "quantity": 1
+            },
+            {
+                "name": "Giant Heart",
+                "quantity": 1
+            },
+            {
+                "name": "Caelumite",
+                "quantity": 1
+            },
+            {
+                "name": "Neurologic",
+                "quantity": 2
+            }
+        ],
+        "requiredResearch": "Innovative Synthesis 3",
+        "category": "Innovative Synthesis"
+    },
+    {
+        "name": "AddiJack",
+        "ingredients": [
+            {
+                "name": "Lithium",
+                "quantity": 2
+            },
+            {
+                "name": "Neurajack",
+                "quantity": 1
+            },
+            {
+                "name": "Addichrone",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "",
+        "category": "Magazine Recipes"
+    },
+    {
+        "name": "BattleUp",
+        "ingredients": [
+            {
+                "name": "Infantry Alpha",
+                "quantity": 1
+            },
+            {
+                "name": "Battlestim",
+                "quantity": 1
+            },
+            {
+                "name": "Metabolic Agent",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "",
+        "category": "Magazine Recipes"
+    },
+    {
+        "name": "O2 Shot",
+        "ingredients": [
+            {
+                "name": "Amp",
+                "quantity": 1
+            },
+            {
+                "name": "Snake Oil",
+                "quantity": 1
+            },
+            {
+                "name": "Metabolic Agent",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "",
+        "category": "Magazine Recipes"
+    },
+    {
+        "name": "RedAMP",
+        "ingredients": [
+            {
+                "name": "Mercury",
+                "quantity": 2
+            },
+            {
+                "name": "Red Trench",
+                "quantity": 1
+            },
+            {
+                "name": "Amp",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "",
+        "category": "Magazine Recipes"
+    },
+    {
+        "name": "S.T.E.V.E.",
+        "ingredients": [
+            {
+                "name": "Panopticon",
+                "quantity": 1
+            },
+            {
+                "name": "Aurora",
+                "quantity": 1
+            },
+            {
+                "name": "Uranium",
+                "quantity": 1
+            }
+        ],
+        "requiredResearch": "",
+        "category": "Magazine Recipes"
+    }
+]
