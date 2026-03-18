@@ -7,6 +7,7 @@ import { colors, spacing, fonts, fontSize, letterSpacing } from '../../src/theme
 import { categories, getCategory } from '../../src/data/registry';
 import { categoryGroupOrder, categoryGroupLabels, SearchResult } from '../../src/data/types';
 import { CategoryRow } from '../../src/components/CategoryRow';
+import { ScreenHeader } from '../../src/components/ScreenHeader';
 import { SectionHeader } from '../../src/components/SectionHeader';
 import { SearchBar } from '../../src/components/SearchBar';
 import { useSearch } from '../../src/hooks/useSearch';
@@ -46,10 +47,11 @@ export default function BrowseScreen() {
 
   return (
     <SafeAreaView style={styles.screen} edges={['top']}>
-      <View style={styles.header}>
-        <Text style={styles.title}>STARFIELD</Text>
-        <Text style={styles.subtitle}>COMPANION DATABASE</Text>
-      </View>
+      <ScreenHeader
+        title="STARFIELD"
+        subtitle="COMPANION DATABASE"
+        onGearPress={() => router.push('/about')}
+      />
       <SearchBar
         value={query}
         onChangeText={setQuery}
@@ -151,26 +153,6 @@ const styles = StyleSheet.create({
   screen: {
     flex: 1,
     backgroundColor: colors.background,
-  },
-  header: {
-    paddingHorizontal: spacing.lg,
-    paddingTop: spacing.lg,
-    paddingBottom: spacing.md,
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    borderBottomColor: colors.border,
-  },
-  title: {
-    fontFamily: fonts.headingBold,
-    fontSize: fontSize.xxl,
-    color: colors.textPrimary,
-    letterSpacing: letterSpacing.wider,
-  },
-  subtitle: {
-    fontFamily: fonts.heading,
-    fontSize: fontSize.xs,
-    color: colors.primary,
-    letterSpacing: letterSpacing.wider,
-    marginTop: 2,
   },
   sectionHeader: {
     fontFamily: fonts.headingBold,

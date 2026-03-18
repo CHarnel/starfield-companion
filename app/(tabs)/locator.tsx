@@ -8,9 +8,11 @@ import {
   StyleSheet,
   ActivityIndicator,
 } from 'react-native';
+import { useRouter } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import { colors, spacing, fonts, fontSize, letterSpacing } from '../../src/theme';
+import { ScreenHeader } from '../../src/components/ScreenHeader';
 import { SearchBar } from '../../src/components/SearchBar';
 import { useResourceLocator } from '../../src/hooks/useResourceLocator';
 import { SystemResult, PlanetSource } from '../../src/services/resourceLocator';
@@ -18,6 +20,7 @@ import { SystemResult, PlanetSource } from '../../src/services/resourceLocator';
 type PickerTarget = 'resource' | 'origin' | null;
 
 export default function LocatorScreen() {
+  const router = useRouter();
   const {
     selectedResource,
     setResource,
@@ -109,9 +112,11 @@ export default function LocatorScreen() {
 
   return (
     <SafeAreaView style={styles.screen} edges={['top']}>
-      <View style={styles.header}>
-        <Text style={styles.title}>RESOURCE LOCATOR</Text>
-      </View>
+      <ScreenHeader
+        title="LOCATOR"
+        subtitle="RESOURCE FINDER"
+        onGearPress={() => router.push('/about')}
+      />
 
       <Pressable style={styles.selector} onPress={() => openPicker('resource')}>
         <Ionicons name="diamond-outline" size={16} color={colors.primary} />
@@ -309,17 +314,6 @@ const styles = StyleSheet.create({
   screen: {
     flex: 1,
     backgroundColor: colors.background,
-  },
-  header: {
-    paddingHorizontal: spacing.lg,
-    paddingTop: spacing.lg,
-    paddingBottom: spacing.sm,
-  },
-  title: {
-    fontFamily: fonts.headingBold,
-    fontSize: fontSize.xl,
-    color: colors.textPrimary,
-    letterSpacing: letterSpacing.wider,
   },
   selector: {
     flexDirection: 'row',

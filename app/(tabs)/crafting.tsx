@@ -3,18 +3,20 @@ import { ScrollView, View, Text, Pressable, StyleSheet } from 'react-native';
 import { useRouter } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
-import { colors, spacing, fonts, fontSize, letterSpacing } from '../../src/theme';
+import { colors, spacing, fonts, fontSize } from '../../src/theme';
 import { stations } from '../../src/data/craftingStations';
+import { ScreenHeader } from '../../src/components/ScreenHeader';
 
 export default function CraftingScreen() {
   const router = useRouter();
 
   return (
     <SafeAreaView style={styles.screen} edges={['top']}>
-      <View style={styles.header}>
-        <Text style={styles.title}>CRAFTING</Text>
-        <Text style={styles.subtitle}>WORKBENCHES & STATIONS</Text>
-      </View>
+      <ScreenHeader
+        title="CRAFTING"
+        subtitle="WORKBENCHES & STATIONS"
+        onGearPress={() => router.push('/about')}
+      />
       <ScrollView style={styles.scroll} contentContainerStyle={styles.scrollContent}>
         {stations.map((station) => (
           <Pressable
@@ -60,26 +62,6 @@ const styles = StyleSheet.create({
   screen: {
     flex: 1,
     backgroundColor: colors.background,
-  },
-  header: {
-    paddingHorizontal: spacing.lg,
-    paddingTop: spacing.lg,
-    paddingBottom: spacing.md,
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    borderBottomColor: colors.border,
-  },
-  title: {
-    fontFamily: fonts.headingBold,
-    fontSize: fontSize.xxl,
-    color: colors.textPrimary,
-    letterSpacing: letterSpacing.wider,
-  },
-  subtitle: {
-    fontFamily: fonts.heading,
-    fontSize: fontSize.xs,
-    color: colors.primary,
-    letterSpacing: letterSpacing.wider,
-    marginTop: 2,
   },
   scroll: {
     flex: 1,

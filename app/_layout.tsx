@@ -53,6 +53,10 @@ export default function RootLayout() {
           name="resource-locator/[name]"
           options={{ headerBackTitle: 'Back' }}
         />
+        <Stack.Screen
+          name="about"
+          options={{ headerBackTitle: 'Back', title: 'About' }}
+        />
       </Stack>
     </>
   );
