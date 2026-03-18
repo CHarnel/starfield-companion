@@ -44,6 +44,15 @@ export default function RootLayout() {
           name="item/[categoryId]/[index]"
           options={{ headerBackTitle: 'Back' }}
         />
+        <Stack.Screen name="station/[id]" options={{ headerBackTitle: 'Back' }} />
+        <Stack.Screen
+          name="recipe/[stationId]/[index]"
+          options={{ headerBackTitle: 'Back' }}
+        />
+        <Stack.Screen
+          name="resource-locator/[name]"
+          options={{ headerBackTitle: 'Back' }}
+        />
       </Stack>
     </>
   );
