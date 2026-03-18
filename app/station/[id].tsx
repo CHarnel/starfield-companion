@@ -44,7 +44,7 @@ export default function StationScreen() {
     [sections],
   );
 
-  const showTierBadges = station?.id === 'weapon' || station?.id === 'spacesuit';
+  const showTierBadges = true;
 
   const renderItem = useCallback(
     ({ item }: { item: { recipe: CraftingRecipe; index: number } }) => {
