@@ -72,7 +72,7 @@ Scan the QR code with Expo Go on your phone, or press `i` for iOS simulator / `a
 
 ## 📦 Data sources
 
-Game data is sourced from the [starfield-data](https://github.com/damienaries/starfield-data) community repository. The JSON files are bundled directly in the app at `src/data/json/`.
+Game data is sourced from the [starfield-data](https://github.com/damienaries/starfield-data) community repository. Star system coordinates are extracted from game files via [uesp/sf-testesm](https://github.com/uesp/sf-testesm). The JSON files are bundled directly in the app at `src/data/json/`.
 
 ## License
 
