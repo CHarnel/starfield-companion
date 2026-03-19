@@ -403,7 +403,9 @@ function buildPalette(planet: PlanetData): PlanetPalette {
     light: tintColor(tp.light, tint),
     atmoColor: atmo.color,
     atmoDensity: atmo.density,
-    waterColor: WATER_COLORS[planet.water] ?? '',
+    waterColor: planet.biomes?.some((b) => b.name === 'Ocean')
+      ? (WATER_COLORS[planet.water] ?? '')
+      : '',
   };
 }
 
