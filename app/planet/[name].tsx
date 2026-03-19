@@ -1,9 +1,9 @@
-import React, { useMemo } from 'react';
-import { View, Text, ScrollView, StyleSheet } from 'react-native';
+import React, { useMemo, useState } from 'react';
+import { View, Text, ScrollView, StyleSheet, Pressable } from 'react-native';
 import { useLocalSearchParams, Stack } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { colors, spacing, fonts, fontSize, letterSpacing, rarityColor } from '../../src/theme';
-import { WireframePlanet } from '../../src/components/WireframePlanet';
+import { PlanetIllustration } from '../../src/components/PlanetIllustration';
 import {
   getPlanetByName,
   resolveResourceMeta,
@@ -48,6 +48,7 @@ export default function PlanetDetailScreen() {
   const { name } = useLocalSearchParams<{ name: string }>();
   const planetName = decodeURIComponent(name);
   const planet = useMemo(() => getPlanetByName(planetName), [planetName]);
+  const [showDisclaimer, setShowDisclaimer] = useState(false);
 
   const inorganic = useMemo(() => {
     if (!planet) return [];
@@ -112,8 +113,29 @@ export default function PlanetDetailScreen() {
         </View>
       </View>
 
-      {/* Wireframe */}
-      <WireframePlanet size={200} />
+      {/* Planet illustration */}
+      <View style={styles.illustrationWrapper}>
+        <PlanetIllustration size={200} planet={planet} />
+        <Pressable
+          style={styles.disclaimerButton}
+          onPress={() => setShowDisclaimer((v) => !v)}
+          hitSlop={8}
+        >
+          <Ionicons
+            name="information-circle-outline"
+            size={14}
+            color={colors.textMuted}
+          />
+        </Pressable>
+        {showDisclaimer && (
+          <View style={styles.disclaimerBox}>
+            <Text style={styles.disclaimerText}>
+              Artistic illustration based on planet data.{'\n'}Not
+              representative of in-game appearance.
+            </Text>
+          </View>
+        )}
+      </View>
 
       {/* Properties */}
       <SectionTitle icon="analytics-outline" title="PROPERTIES" />
@@ -303,6 +325,31 @@ const styles = StyleSheet.create({
     fontFamily: fonts.body,
     fontSize: fontSize.sm,
     color: colors.textMuted,
+  },
+  illustrationWrapper: {
+    alignItems: 'center',
+    marginBottom: spacing.xs,
+  },
+  disclaimerButton: {
+    marginTop: spacing.xs,
+    padding: 4,
+  },
+  disclaimerBox: {
+    backgroundColor: colors.surface,
+    borderWidth: 1,
+    borderColor: colors.border,
+    borderRadius: 4,
+    paddingHorizontal: spacing.md,
+    paddingVertical: spacing.sm,
+    marginTop: spacing.xs,
+    maxWidth: 260,
+  },
+  disclaimerText: {
+    fontFamily: fonts.body,
+    fontSize: fontSize.xs,
+    color: colors.textMuted,
+    textAlign: 'center',
+    lineHeight: 16,
   },
   sectionHeader: {
     flexDirection: 'row',
