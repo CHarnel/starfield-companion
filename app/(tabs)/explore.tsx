@@ -120,7 +120,11 @@ export default function ExploreScreen() {
           router.push(`/planet/${encodeURIComponent(item.name)}` as any)
         }
       >
-        <Ionicons name="globe-outline" size={14} color={colors.textMuted} />
+        <Ionicons
+          name="globe-outline"
+          size={14}
+          color={item.flora > 0 || item.fauna > 0 ? '#4CC764' : colors.textMuted}
+        />
         <Text style={styles.planetName} numberOfLines={1}>
           {item.name}
         </Text>
