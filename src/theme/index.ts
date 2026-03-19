@@ -2,7 +2,7 @@ import { StyleSheet, Platform } from 'react-native';
 import { colors } from './colors';
 import { spacing, fontSize, letterSpacing } from './spacing';
 
-export { colors } from './colors';
+export { colors, rarityColor } from './colors';
 export { spacing, fontSize, letterSpacing } from './spacing';
 
 export const fonts = {

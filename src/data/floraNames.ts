@@ -1,0 +1,48 @@
+const FLORA_NAMES: readonly string[] = [
+  'Abyss Pine Seedling', 'Altar Clusterpod', 'Aniline Blackweed', 'Apollo Fireleaf',
+  'Arc Root', 'Aries Vine', 'Aruna Goldenglow', 'Ash Flower', 'Ash Sweeper',
+  'Atlas Weed', 'Augustus Creeper', 'Aurora Palm', 'Autumn Junglebloom',
+  'Barrenbulb', 'Bellona Bush', 'Bitter Bramble', 'Bitter Goldenglow', 'Bitter Orange Root',
+  'Bleeding Heart Vine', 'Blistered Hornbulb', 'Blooming Slopefeather', 'Blood Palm',
+  'Blue Weeping Shrub', 'Bog Bloom', 'Boreas Root', 'Bowing Shadeleaf',
+  'Bright Fire Reed', 'Bristle Barrel', 'Broadleaf Rose', 'Broken Heart Vine',
+  'Burnt Pokeleaf', 'Caelus Pokeweed', 'Cage Brain', 'Canary Reed', 'Canis Palm',
+  'Canyon Rose', 'Chillhook', 'Christina Bloom', 'Cliff Laurel', 'Cliffberry',
+  'Cold Cave Nettle', 'Crag Root', 'Crater Weed', 'Craterhorn Shrub',
+  'Creeping Twin Shrub', 'Crimson Courtstalk', 'Crimson Gibbet', 'Crusher Leaf',
+  'Dappled Ash Bloom', 'Desiccated Yarberry', 'Dessicated Yarberry',
+  'Dovefoot Pedestal', 'Dunetangle', 'Dust Root', 'Duster Shrub',
+  'Enduring Bugleweed', 'Eurymedon Bulb', "Explorer's Coleus",
+  'Fallen Star Palm', 'Festering Junglecreep', 'Fire Rose', 'Firecracker Vine',
+  'Flame Vine', 'Forest Wisp', 'Frigid Palm', 'Frost Reed',
+  'Gasping Fireleaf', 'Ginger Cage Vine', 'Glossy Stickweed', 'Gnaw Stalk',
+  'Golden Creeper', 'Golden Sand Root',
+  'Hardy Woundwort', 'Haven Vine', 'Haviva Vine', "Hecate's Fireleaf",
+  "Hunter's Stalk", 'Ice Creeper', 'Iceblood Vine',
+  'Jagged Heart Leaf', 'Jealous Heart Vine',
+  'Kingshead Bugloss', 'Laga Plant', 'Lattice Leaf',
+  'Leafy Morningstar', 'Leaning Fireleaf',
+  'Mimic Pokeweed', 'Mire Root', 'Moon Root', 'Moth Vine', 'Mountain Silkweed',
+  'Mustard Bugweed', 'Nebula Vine', 'Nebula weed', 'Nova Bloom',
+  'Passenger Vine', 'Phoenix Briar', 'Prickly Awaj',
+  'Red Latticebulb', 'Red Stinging Nettle', 'Rosy Tendril Weed',
+  'Rotorstalk', 'Rotting Stinkroot',
+  'Sage Shrub', 'Sandclaw', 'Sandy Goldenglow', 'Satellite Ghostvine',
+  'Savanna Sweetbush', 'Savage Wonderwort', 'Savage Woundwort', 'Scarlet Hillfrond',
+  'Sleeping Giant Thorn', 'Spike Spit Trap', 'Spiny Bell Cactus', 'Spiny Ghost Cactus',
+  'Spiral Bloom', 'Spiral Creeper', 'Spirit Laurel', 'Spitting Goatweed',
+  'Spitting Pokeweed', 'Split Leaf Watercress', 'Star Bloom Root', 'Starburst Silkweed',
+  'Starleaf', 'Starpod Silkweed', 'Stinging Flutterleaf', 'Stinging Ice Stalk',
+  'Stunted Pine', 'Sub-Zero Silkweed', 'Swamp Bottle Root', 'Swamp Pedestal', 'Swamp Weed',
+  'Sweeping Silkweed', 'Sweet Canis Vine', 'Sweet Fumewort', 'Sweet Goldenglow',
+  'Sweet Root', 'Sweet Wallflower', 'Sweet Yellow Creeper', 'Sweetwater Cactus',
+  'Terra Root', 'Titan Coleus', 'Tremor Root', 'Tropical Maw Palm',
+  'Tufted Snow Willow', 'Tundra Vine', 'Twilight Cradleleaf',
+  'Velvet Bloom', "Wanderer's Husk", 'Warren Nettle', 'Weeping Fireleaf',
+];
+
+const floraLookup = new Set(FLORA_NAMES.map((n) => n.toLowerCase()));
+
+export function isFlora(organismName: string): boolean {
+  return floraLookup.has(organismName.toLowerCase());
+}

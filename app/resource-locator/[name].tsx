@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from 'react';
 import { View, Text, FlatList, Pressable, StyleSheet } from 'react-native';
-import { useLocalSearchParams, Stack } from 'expo-router';
+import { useLocalSearchParams, useRouter, Stack } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { colors, spacing, fonts, fontSize, letterSpacing } from '../../src/theme';
 import {
@@ -176,9 +176,15 @@ function SystemCard({ result }: { result: SystemResult }) {
 }
 
 function PlanetRow({ planet }: { planet: PlanetSource }) {
+  const router = useRouter();
   const organicSources = planet.sources.filter((s) => s.type !== 'mineral');
   return (
-    <View style={styles.planetRow}>
+    <Pressable
+      style={styles.planetRow}
+      onPress={() =>
+        router.push(`/planet/${encodeURIComponent(planet.planet)}` as any)
+      }
+    >
       <Ionicons
         name="globe-outline"
         size={12}
@@ -195,7 +201,8 @@ function PlanetRow({ planet }: { planet: PlanetSource }) {
             .join(', ')}
         </Text>
       )}
-    </View>
+      <Ionicons name="chevron-forward" size={12} color={colors.textMuted} />
+    </Pressable>
   );
 }
 

@@ -15,6 +15,24 @@ export const colors = {
   textMuted: '#576275',
 
   transparent: 'transparent',
+
+  rarityCommon: '#C8CCD4',
+  rarityUncommon: '#4CC764',
+  rarityRare: '#5B9FE3',
+  rarityExotic: '#B06ADE',
+  rarityUnique: '#D4A54A',
 } as const;
 
 export type ColorName = keyof typeof colors;
+
+const rarityMap: Record<string, string> = {
+  common: colors.rarityCommon,
+  uncommon: colors.rarityUncommon,
+  rare: colors.rarityRare,
+  exotic: colors.rarityExotic,
+  unique: colors.rarityUnique,
+};
+
+export function rarityColor(rarity: string | undefined): string {
+  return rarityMap[rarity?.toLowerCase() ?? ''] ?? colors.textSecondary;
+}

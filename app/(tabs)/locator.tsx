@@ -71,7 +71,13 @@ export default function LocatorScreen() {
   const renderPlanet = useCallback((p: PlanetSource) => {
     const organicSources = p.sources.filter((s) => s.type !== 'mineral');
     return (
-      <View key={p.planet} style={styles.planetRow}>
+      <Pressable
+        key={p.planet}
+        style={styles.planetRow}
+        onPress={() =>
+          router.push(`/planet/${encodeURIComponent(p.planet)}` as any)
+        }
+      >
         <Ionicons
           name="globe-outline"
           size={12}
@@ -88,9 +94,10 @@ export default function LocatorScreen() {
               .join(', ')}
           </Text>
         )}
-      </View>
+        <Ionicons name="chevron-forward" size={12} color={colors.textMuted} />
+      </Pressable>
     );
-  }, []);
+  }, [router]);
 
   const renderResult = useCallback(({ item }: { item: SystemResult }) => {
     const isOrigin = item.system === originSystem;

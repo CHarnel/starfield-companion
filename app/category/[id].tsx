@@ -56,9 +56,14 @@ export default function CategoryScreen() {
               item={item}
               nameField={category.nameField}
               listFields={category.listFields}
-              onPress={() =>
-                router.push(`/item/${category.id}/${originalIndex}`)
-              }
+              onPress={() => {
+                if (category.id === 'galaxy') {
+                  const planetName = String(item[category.nameField] ?? '');
+                  router.push(`/planet/${encodeURIComponent(planetName)}` as any);
+                } else {
+                  router.push(`/item/${category.id}/${originalIndex}`);
+                }
+              }}
             />
           );
         }}
