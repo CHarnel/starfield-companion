@@ -42,7 +42,7 @@ export interface SystemResult {
   planets: PlanetSource[];
 }
 
-type Coords = { x: number; y: number; z: number };
+export type Coords = { x: number; y: number; z: number };
 
 interface IndexEntry {
   system: string;
@@ -57,7 +57,7 @@ const typedResources = resources as unknown as ResourceDef[];
 let starCoords: Map<string, Coords> | null = null;
 let reverseIndex: Map<string, IndexEntry[]> | null = null;
 
-function getStarCoords(): Map<string, Coords> {
+export function getStarCoords(): Map<string, Coords> {
   if (starCoords) return starCoords;
   starCoords = new Map();
   for (const star of typedStars) {
@@ -102,7 +102,7 @@ function getReverseIndex() {
   return reverseIndex;
 }
 
-function euclidean(a: Coords, b: Coords): number {
+export function euclidean(a: Coords, b: Coords): number {
   return Math.sqrt((b.x - a.x) ** 2 + (b.y - a.y) ** 2 + (b.z - a.z) ** 2);
 }
 

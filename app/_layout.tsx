@@ -5,6 +5,7 @@ import { useFonts, Exo2_600SemiBold, Exo2_700Bold } from '@expo-google-fonts/exo
 import { Inter_400Regular, Inter_500Medium, Inter_600SemiBold } from '@expo-google-fonts/inter';
 import * as SplashScreen from 'expo-splash-screen';
 import { colors } from '../src/theme';
+import { LocationProvider } from '../src/context/LocationContext';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -28,7 +29,7 @@ export default function RootLayout() {
   }
 
   return (
-    <>
+    <LocationProvider>
       <StatusBar style="light" />
       <Stack
         screenOptions={{
@@ -62,6 +63,6 @@ export default function RootLayout() {
           options={{ headerBackTitle: 'Back', title: 'About' }}
         />
       </Stack>
-    </>
+    </LocationProvider>
   );
 }

@@ -10,6 +10,7 @@ import {
   SystemResult,
   PlanetSource,
 } from '../../src/services/resourceLocator';
+import { useLocation } from '../../src/context/LocationContext';
 import resources from '../../src/data/json/resources.json';
 import materials from '../../src/data/json/Materials.json';
 
@@ -21,8 +22,6 @@ interface ResourceDef {
   type?: string;
   rarity?: string;
 }
-
-const DEFAULT_ORIGIN = 'Sol';
 
 function resolveResource(
   searchName: string,
@@ -64,12 +63,13 @@ function resolveResource(
 export default function ResourceLocatorScreen() {
   const { name } = useLocalSearchParams<{ name: string }>();
   const searchName = decodeURIComponent(name);
+  const { currentSystem } = useLocation();
 
   const resolved = useMemo(() => resolveResource(searchName), [searchName]);
   const results = useMemo(() => {
     if (!resolved) return [];
-    return findResource(resolved.shortName, DEFAULT_ORIGIN);
-  }, [resolved]);
+    return findResource(resolved.shortName, currentSystem);
+  }, [resolved, currentSystem]);
 
   return (
     <View style={styles.screen}>
@@ -142,7 +142,7 @@ export default function ResourceLocatorScreen() {
         <>
           <Text style={styles.resultCount}>
             {results.length} system{results.length !== 1 ? 's' : ''} found
-            {' · sorted by distance from Sol'}
+            {` · sorted by distance from ${currentSystem}`}
           </Text>
           <FlatList
             data={results}

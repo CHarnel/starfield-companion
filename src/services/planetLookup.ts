@@ -1,5 +1,6 @@
 import galaxy from '../data/json/galaxy.json';
 import resources from '../data/json/resources.json';
+import { getStarCoords, euclidean } from './resourceLocator';
 
 export interface PlanetData {
   system: string;
@@ -33,11 +34,31 @@ interface SystemGroup {
   planets: PlanetData[];
 }
 
+export interface SystemGroupWithDistance extends SystemGroup {
+  distance: number;
+}
+
 const allPlanets = galaxy as PlanetData[];
 
 let planetMap: Map<string, PlanetData> | null = null;
 let resourceMap: Map<string, ResourceMeta> | null = null;
 let systemGroups: SystemGroup[] | null = null;
+let systemPlanetMap: Map<string, PlanetData[]> | null = null;
+
+function ensureSystemPlanetMap(): Map<string, PlanetData[]> {
+  if (!systemPlanetMap) {
+    systemPlanetMap = new Map();
+    for (const p of allPlanets) {
+      let list = systemPlanetMap.get(p.system);
+      if (!list) {
+        list = [];
+        systemPlanetMap.set(p.system, list);
+      }
+      list.push(p);
+    }
+  }
+  return systemPlanetMap;
+}
 
 function ensurePlanetMap(): Map<string, PlanetData> {
   if (!planetMap) {
@@ -79,18 +100,31 @@ export function resolveResourceMeta(shortName: string): ResourceMeta | null {
 
 export function getSystemGroups(): SystemGroup[] {
   if (!systemGroups) {
-    const map = new Map<string, PlanetData[]>();
-    for (const p of allPlanets) {
-      let list = map.get(p.system);
-      if (!list) {
-        list = [];
-        map.set(p.system, list);
-      }
-      list.push(p);
-    }
+    const map = ensureSystemPlanetMap();
     systemGroups = Array.from(map.entries())
       .sort(([a], [b]) => a.localeCompare(b))
       .map(([system, planets]) => ({ system, planets }));
   }
   return systemGroups;
+}
+
+export function getSystemGroupsByDistance(originSystem: string): SystemGroupWithDistance[] {
+  const map = ensureSystemPlanetMap();
+  const coords = getStarCoords();
+  const origin = coords.get(originSystem);
+  if (!origin) return [];
+
+  const groups: SystemGroupWithDistance[] = [];
+  for (const [system, planets] of map) {
+    const systemCoords = coords.get(system);
+    if (!systemCoords) continue;
+    groups.push({
+      system,
+      planets,
+      distance: Math.round(euclidean(origin, systemCoords) * 100) / 100,
+    });
+  }
+
+  groups.sort((a, b) => a.distance - b.distance);
+  return groups;
 }

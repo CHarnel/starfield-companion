@@ -5,30 +5,40 @@ import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { colors, spacing, fonts, fontSize, letterSpacing } from '../../src/theme';
 import { SearchBar } from '../../src/components/SearchBar';
-import { getSystemGroups, PlanetData } from '../../src/services/planetLookup';
+import { getSystemGroupsByDistance, PlanetData } from '../../src/services/planetLookup';
+import { useLocation } from '../../src/context/LocationContext';
 
 interface Section {
   system: string;
+  distance: number;
   data: PlanetData[];
 }
 
 export default function ExploreScreen() {
   const router = useRouter();
+  const { currentSystem } = useLocation();
   const [query, setQuery] = useState('');
   const [collapsed, setCollapsed] = useState<Set<string>>(new Set());
 
-  const allSystems = useMemo(() => getSystemGroups(), []);
+  const allSystems = useMemo(
+    () => getSystemGroupsByDistance(currentSystem),
+    [currentSystem],
+  );
 
   const sections: Section[] = useMemo(() => {
     const q = query.toLowerCase().trim();
     if (!q) {
-      return allSystems.map((g) => ({ system: g.system, data: g.planets }));
+      return allSystems.map((g) => ({
+        system: g.system,
+        distance: g.distance,
+        data: g.planets,
+      }));
     }
     const result: Section[] = [];
     for (const g of allSystems) {
       const systemMatch = g.system.toLowerCase().includes(q);
       if (systemMatch) {
-        result.push({ system: g.system, data: g.planets });
+        result.push({ system: g.system, distance: g.distance, data: g.planets });
       } else {
         const matched = g.planets.filter(
           (p) =>
@@ -36,7 +46,7 @@ export default function ExploreScreen() {
             p.type.toLowerCase().includes(q),
         );
         if (matched.length > 0) {
-          result.push({ system: g.system, data: matched });
+          result.push({ system: g.system, distance: g.distance, data: matched });
         }
       }
     }
@@ -66,15 +76,27 @@ export default function ExploreScreen() {
     ({ section }: { section: Section }) => {
       const isCollapsed = !isFiltering && collapsed.has(section.system);
       const planetCount = sections.find((s) => s.system === section.system)?.data.length ?? 0;
+      const isCurrent = section.distance === 0;
       return (
         <Pressable
           style={styles.systemRow}
           onPress={() => toggleSystem(section.system)}
         >
-          <Ionicons name="star-outline" size={14} color={colors.amber} />
+          <Ionicons
+            name={isCurrent ? 'locate' : 'star-outline'}
+            size={14}
+            color={isCurrent ? colors.primary : colors.amber}
+          />
           <Text style={styles.systemName} numberOfLines={1}>
             {section.system}
           </Text>
+          {isCurrent ? (
+            <View style={styles.currentBadge}>
+              <Text style={styles.currentBadgeText}>CURRENT</Text>
+            </View>
+          ) : (
+            <Text style={styles.distanceText}>{section.distance} ly</Text>
+          )}
           <Text style={styles.planetCount}>{planetCount}</Text>
           {!isFiltering && (
             <Ionicons
@@ -187,6 +209,23 @@ const styles = StyleSheet.create({
     fontFamily: fonts.mono,
     fontSize: fontSize.xs,
     color: colors.textMuted,
+  },
+  distanceText: {
+    fontFamily: fonts.mono,
+    fontSize: fontSize.xs,
+    color: colors.textMuted,
+  },
+  currentBadge: {
+    paddingHorizontal: spacing.sm,
+    paddingVertical: 1,
+    borderRadius: 2,
+    backgroundColor: colors.primary,
+  },
+  currentBadgeText: {
+    fontFamily: fonts.mono,
+    fontSize: fontSize.xs,
+    color: colors.background,
+    fontWeight: '700',
   },
   planetRow: {
     flexDirection: 'row',

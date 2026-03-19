@@ -6,11 +6,8 @@ import {
   SystemResult,
 } from '../services/resourceLocator';
 
-const DEFAULT_ORIGIN = 'Alpha Centauri';
-
-export function useResourceLocator() {
+export function useResourceLocator(originSystem: string) {
   const [selectedResource, setSelectedResource] = useState<string | null>(null);
-  const [originSystem, setOriginSystem] = useState(DEFAULT_ORIGIN);
   const [results, setResults] = useState<SystemResult[]>([]);
   const [isSearching, setIsSearching] = useState(false);
 
@@ -37,7 +34,6 @@ export function useResourceLocator() {
     selectedResource,
     setResource: setSelectedResource,
     originSystem,
-    setOrigin: setOriginSystem,
     results,
     isSearching,
     locatableResources,

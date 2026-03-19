@@ -15,22 +15,23 @@ import { colors, spacing, fonts, fontSize, letterSpacing } from '../../src/theme
 import { ScreenHeader } from '../../src/components/ScreenHeader';
 import { SearchBar } from '../../src/components/SearchBar';
 import { useResourceLocator } from '../../src/hooks/useResourceLocator';
+import { useLocation } from '../../src/context/LocationContext';
 import { SystemResult, PlanetSource } from '../../src/services/resourceLocator';
 
 type PickerTarget = 'resource' | 'origin' | null;
 
 export default function LocatorScreen() {
   const router = useRouter();
+  const { currentSystem, setCurrentSystem } = useLocation();
   const {
     selectedResource,
     setResource,
     originSystem,
-    setOrigin,
     results,
     isSearching,
     locatableResources,
     systemNames,
-  } = useResourceLocator();
+  } = useResourceLocator(currentSystem);
 
   const [pickerTarget, setPickerTarget] = useState<PickerTarget>(null);
   const [pickerQuery, setPickerQuery] = useState('');
@@ -231,7 +232,7 @@ export default function LocatorScreen() {
                   <Pressable
                     style={[styles.pickerRow, isActive && styles.pickerRowActive]}
                     onPress={() => {
-                      setOrigin(name);
+                      setCurrentSystem(name);
                       closePicker();
                     }}
                   >
