@@ -3,7 +3,8 @@ import { View, Text, SectionList, Pressable, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
-import { colors, spacing, fonts, fontSize, letterSpacing } from '../../src/theme';
+import { colors, spacing, fonts, fontSize } from '../../src/theme';
+import { ScreenHeader } from '../../src/components/ScreenHeader';
 import { SearchBar } from '../../src/components/SearchBar';
 import { getSystemGroupsByDistance, PlanetData } from '../../src/services/planetLookup';
 import { useLocation } from '../../src/context/LocationContext';
@@ -134,9 +135,11 @@ export default function ExploreScreen() {
 
   return (
     <SafeAreaView style={styles.screen} edges={['top']}>
-      <View style={styles.header}>
-        <Text style={styles.title}>EXPLORE</Text>
-      </View>
+      <ScreenHeader
+        title="EXPLORE"
+        subtitle="PLANETS & SYSTEMS"
+        onGearPress={() => router.push('/about')}
+      />
 
       <SearchBar
         value={query}
@@ -167,17 +170,6 @@ const styles = StyleSheet.create({
   screen: {
     flex: 1,
     backgroundColor: colors.background,
-  },
-  header: {
-    paddingHorizontal: spacing.lg,
-    paddingTop: spacing.lg,
-    paddingBottom: spacing.sm,
-  },
-  title: {
-    fontFamily: fonts.headingBold,
-    fontSize: fontSize.xl,
-    color: colors.textPrimary,
-    letterSpacing: letterSpacing.wider,
   },
   resultCount: {
     fontFamily: fonts.body,
