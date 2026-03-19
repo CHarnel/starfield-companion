@@ -167,8 +167,8 @@ void main() {
       float waterLine = 0.42;
       if (u_hasWater > 0.5 && terrain < waterLine) {
         float depth = smoothstep(waterLine, waterLine - 0.18, terrain);
-        surfCol = mix(u_waterCol * 0.6, u_waterCol * 0.25, depth);
-        surfCol += u_waterCol * 0.08 * detail;
+        surfCol = mix(u_waterCol * 0.9, u_waterCol * 0.45, depth);
+        surfCol += u_waterCol * 0.06 * detail;
       } else {
         float landAlt = smoothstep(waterLine - 0.05, 0.72, terrain);
         surfCol = mix(u_color2, u_color1, smoothstep(0.0, 0.4, landAlt));
@@ -205,8 +205,11 @@ void main() {
     float rimSun  = clamp(NdotL + 0.3, 0.0, 1.0);
     surfCol += u_atmoCol * rimGlow * rimSun * 0.5;
 
-    // ── Tone mapping (Reinhard) + gamma on planet surface only ──
-    surfCol = surfCol * 1.3 / (1.0 + surfCol);
+    // ── Saturation boost + tone mapping ──
+    float lum = dot(surfCol, vec3(0.299, 0.587, 0.114));
+    surfCol = mix(vec3(lum), surfCol, 1.35);
+    surfCol = max(surfCol, 0.0);
+    surfCol = surfCol * 1.5 / (1.0 + surfCol);
     surfCol = pow(surfCol, vec3(1.0 / 2.2));
 
     // ── Anti-aliased edge (resolution-aware) ──
@@ -275,11 +278,11 @@ const TEMP_TINTS: Record<string, [number, number, number]> = {
 };
 
 const WATER_COLORS: Record<string, string> = {
-  safe: '#3A8AB5',
-  chemical: '#8AA030',
-  biological: '#40A060',
-  radioactive: '#60A050',
-  'heavy metal': '#A08040',
+  safe: '#2090D0',
+  chemical: '#90B020',
+  biological: '#30B868',
+  radioactive: '#50C048',
+  'heavy metal': '#B89030',
 };
 
 function parseAtmosphere(atmo: string): { density: number; color: string } {
@@ -316,16 +319,16 @@ function parseAtmosphere(atmo: string): { density: number; color: string } {
 // ── Biome-aware palette ──────────────────────────────────────
 
 const BIOME_PALETTES: Record<string, TypePalette> = {
-  forest:   { base: '#4A7A3A', dark: '#2A5A1A', light: '#6A9A5A' },
-  tropical: { base: '#2A6A30', dark: '#1A4A20', light: '#4A8A4A' },
-  savanna:  { base: '#8A9A3A', dark: '#6A7A2A', light: '#AABA5A' },
-  swamp:    { base: '#3A5A3A', dark: '#2A4A2A', light: '#5A7A5A' },
-  frozen:   { base: '#A0C0D0', dark: '#7098B0', light: '#C8E0F0' },
-  desert:   { base: '#B0A060', dark: '#8A7A40', light: '#D0C080' },
-  volcanic: { base: '#6A3030', dark: '#4A2020', light: '#8A5050' },
-  rocky:    { base: '#7A7A7A', dark: '#5A5A5A', light: '#9A9A9A' },
-  craters:  { base: '#6A6A6A', dark: '#4A4A4A', light: '#8A8A8A' },
-  exotic:   { base: '#6A5A8A', dark: '#4A3A6A', light: '#8A7AAA' },
+  forest:   { base: '#2E8B1E', dark: '#1A6B0A', light: '#5AAE4A' },
+  tropical: { base: '#1A7A24', dark: '#0C5A14', light: '#3CA03A' },
+  savanna:  { base: '#A0AA2A', dark: '#788818', light: '#C4D048' },
+  swamp:    { base: '#2A6A38', dark: '#1A4A26', light: '#4A8A5A' },
+  frozen:   { base: '#90C8E0', dark: '#60A0C8', light: '#C0E4F8' },
+  desert:   { base: '#C4A850', dark: '#9A8030', light: '#E4CC78' },
+  volcanic: { base: '#8A2820', dark: '#5A1810', light: '#B04838' },
+  rocky:    { base: '#7A7A7A', dark: '#585858', light: '#A0A0A0' },
+  craters:  { base: '#686868', dark: '#484848', light: '#909090' },
+  exotic:   { base: '#7A58B0', dark: '#5A3890', light: '#A080D0' },
 };
 
 function classifyBiome(name: string): string {
