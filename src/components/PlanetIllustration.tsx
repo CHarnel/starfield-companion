@@ -1,5 +1,14 @@
-import React, { useEffect, useRef, useMemo, useCallback } from 'react';
+import React, { useEffect, useRef, useMemo, useCallback, useState } from 'react';
+import { StyleSheet, View } from 'react-native';
 import { GLView, type ExpoWebGLRenderingContext } from 'expo-gl';
+import Svg, {
+  Circle,
+  Ellipse,
+  Defs,
+  RadialGradient,
+  Stop,
+  ClipPath,
+} from 'react-native-svg';
 import type { PlanetData } from '../services/planetLookup';
 
 interface Props {
@@ -455,6 +464,126 @@ function createProgram(
   return prog;
 }
 
+// ── SVG wireframe fallback (old-GPU / simulator safety net) ──
+
+function WireframeFallback({
+  size,
+  palette,
+  seed,
+}: {
+  size: number;
+  palette: PlanetPalette;
+  seed: number;
+}) {
+  const cx = size / 2;
+  const cy = size / 2;
+  const r = size * 0.38;
+  const [phase, setPhase] = useState(0);
+  const rafRef = useRef<number | null>(null);
+  const lastT = useRef(0);
+
+  useEffect(() => {
+    const tick = (t: number) => {
+      if (lastT.current === 0) lastT.current = t;
+      const dt = (t - lastT.current) / 1000;
+      lastT.current = t;
+      setPhase((p) => p + dt * 0.4);
+      rafRef.current = requestAnimationFrame(tick);
+    };
+    rafRef.current = requestAnimationFrame(tick);
+    return () => {
+      if (rafRef.current != null) cancelAnimationFrame(rafRef.current);
+    };
+  }, []);
+
+  const hasAtmo = palette.atmoColor !== '';
+  const lineColor = palette.light + '55';
+  const lats = [-0.6, -0.3, 0, 0.3, 0.6];
+
+  const lonCount = 5;
+  const lons: number[] = [];
+  for (let i = 0; i < lonCount; i++) {
+    lons.push(((i / lonCount) * Math.PI + phase) % Math.PI);
+  }
+
+  return (
+    <Svg
+      width={size}
+      height={size}
+      viewBox={`0 0 ${size} ${size}`}
+      style={{ alignSelf: 'center' }}
+    >
+      <Defs>
+        <RadialGradient id="discGrad" cx="0.4" cy="0.35" r="0.65">
+          <Stop offset="0" stopColor={palette.light} stopOpacity="0.9" />
+          <Stop offset="0.7" stopColor={palette.base} stopOpacity="1" />
+          <Stop offset="1" stopColor={palette.dark} stopOpacity="1" />
+        </RadialGradient>
+        <ClipPath id="discClip">
+          <Circle cx={cx} cy={cy} r={r} />
+        </ClipPath>
+        {hasAtmo && (
+          <RadialGradient id="atmoGrad" cx="0.5" cy="0.5" r="0.5">
+            <Stop offset="0.7" stopColor={palette.atmoColor} stopOpacity="0" />
+            <Stop offset="0.88" stopColor={palette.atmoColor} stopOpacity="0.15" />
+            <Stop offset="1" stopColor={palette.atmoColor} stopOpacity="0" />
+          </RadialGradient>
+        )}
+      </Defs>
+
+      {hasAtmo && (
+        <Circle cx={cx} cy={cy} r={r * 1.2} fill="url(#atmoGrad)" />
+      )}
+
+      <Circle cx={cx} cy={cy} r={r} fill="url(#discGrad)" />
+
+      {lats.map((f, i) => {
+        const ey = cy + f * r;
+        const rx = Math.sqrt(Math.max(0, r * r - (f * r) * (f * r)));
+        return (
+          <Ellipse
+            key={`lat-${i}`}
+            cx={cx}
+            cy={ey}
+            rx={rx}
+            ry={rx * 0.08}
+            fill="none"
+            stroke={lineColor}
+            strokeWidth={1}
+            clipPath="url(#discClip)"
+          />
+        );
+      })}
+
+      {lons.map((angle, i) => {
+        const rx = Math.abs(Math.sin(angle)) * r;
+        return (
+          <Ellipse
+            key={`lon-${i}`}
+            cx={cx}
+            cy={cy}
+            rx={Math.max(rx, 1)}
+            ry={r}
+            fill="none"
+            stroke={lineColor}
+            strokeWidth={1}
+            clipPath="url(#discClip)"
+          />
+        );
+      })}
+
+      <Circle
+        cx={cx}
+        cy={cy}
+        r={r}
+        fill="none"
+        stroke={palette.light + '44'}
+        strokeWidth={1.5}
+      />
+    </Svg>
+  );
+}
+
 // ── Component ────────────────────────────────────────────────
 
 export function PlanetIllustration({ size = 200, planet }: Props) {
@@ -545,10 +674,18 @@ export function PlanetIllustration({ size = 200, planet }: Props) {
     };
   }, []);
 
+  const svgSize = Math.round(size * 0.85);
+  const svgOffset = Math.round((size - svgSize) / 2);
+
   return (
-    <GLView
-      style={{ width: size, height: size, alignSelf: 'center' }}
-      onContextCreate={onContextCreate}
-    />
+    <View style={{ width: size, height: size, alignSelf: 'center' }}>
+      <View style={{ position: 'absolute', top: svgOffset, left: svgOffset }}>
+        <WireframeFallback size={svgSize} palette={palette} seed={seed} />
+      </View>
+      <GLView
+        style={StyleSheet.absoluteFill}
+        onContextCreate={onContextCreate}
+      />
+    </View>
   );
 }
