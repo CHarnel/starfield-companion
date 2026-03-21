@@ -1,0 +1,2010 @@
+{
+  "skills": {
+    "Boxing": {
+      "tree": "physical",
+      "file": "physical_boxing",
+      "ranks": [
+        0,
+        1,
+        3,
+        2,
+        4
+      ]
+    },
+    "Fitness": {
+      "tree": "physical",
+      "file": "physical_fitness",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "Stealth": {
+      "tree": "physical",
+      "file": "physical_stealth",
+      "ranks": [
+        1,
+        0,
+        2,
+        3,
+        4
+      ]
+    },
+    "Weight Lifting": {
+      "tree": "physical",
+      "file": "physical_weightlifting",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "Wellness": {
+      "tree": "physical",
+      "file": "physical_wellness",
+      "ranks": [
+        0,
+        2,
+        1,
+        3,
+        4
+      ]
+    },
+    "Pain Tolerance": {
+      "tree": "physical",
+      "file": "physical_paintolerance",
+      "ranks": [
+        1,
+        0,
+        2,
+        3,
+        4
+      ]
+    },
+    "Nutrition": {
+      "tree": "physical",
+      "file": "physical_nutrition",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "Gymnastics": {
+      "tree": "physical",
+      "file": "physical_gymnastics",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "Environmental Conditioning": {
+      "tree": "physical",
+      "file": "physical_environmentalconditioning",
+      "ranks": [
+        0,
+        1,
+        2,
+        4,
+        3
+      ]
+    },
+    "Energy Weapon Dissipation": {
+      "tree": "physical",
+      "file": "physical_energyweapondissipation",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "Cellular Regeneration": {
+      "tree": "physical",
+      "file": "physical_cellularregeneration",
+      "ranks": []
+    },
+    "Decontamination": {
+      "tree": "physical",
+      "file": "physical_decontamination",
+      "ranks": [
+        1,
+        3,
+        4,
+        0,
+        2
+      ]
+    },
+    "Martial Arts": {
+      "tree": "physical",
+      "file": "physical_martialarts",
+      "ranks": [
+        1,
+        0,
+        3,
+        2,
+        4
+      ]
+    },
+    "Concealment": {
+      "tree": "physical",
+      "file": "physical_concealment",
+      "ranks": [
+        0,
+        2,
+        4,
+        1,
+        3
+      ]
+    },
+    "Neurostrikes": {
+      "tree": "physical",
+      "file": "physical_neurostrikes",
+      "ranks": [
+        0,
+        1,
+        2,
+        4,
+        3
+      ]
+    },
+    "Rejuvenation": {
+      "tree": "physical",
+      "file": "physical_rejuvenation",
+      "ranks": [
+        1,
+        0,
+        2,
+        3,
+        4
+      ]
+    },
+    "Ballistics": {
+      "tree": "combat",
+      "file": "combat_ballistics",
+      "ranks": [
+        2,
+        0,
+        1,
+        3,
+        4
+      ]
+    },
+    "Dueling": {
+      "tree": "combat",
+      "file": "combat_dueling",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "Lasers": {
+      "tree": "combat",
+      "file": "combat_lasers",
+      "ranks": [
+        0,
+        1,
+        3,
+        2,
+        4
+      ]
+    },
+    "Pistol Certification": {
+      "tree": "combat",
+      "file": "combat_pistolcertification",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "Shotgun Certification": {
+      "tree": "combat",
+      "file": "combat_shotguncertification",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "Rifle Certification": {
+      "tree": "combat",
+      "file": "combat_riflecertification",
+      "ranks": [
+        2,
+        0,
+        1,
+        4,
+        3
+      ]
+    },
+    "Particle Beams": {
+      "tree": "combat",
+      "file": "combat_particlebeams",
+      "ranks": [
+        0,
+        2,
+        3,
+        4,
+        1
+      ]
+    },
+    "Incapacitation": {
+      "tree": "combat",
+      "file": "combat_incapacitation",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "Heavy Weapons Certification": {
+      "tree": "combat",
+      "file": "combat_heavyweaponcertification",
+      "ranks": [
+        0,
+        2,
+        1,
+        3,
+        4
+      ]
+    },
+    "Demolitions": {
+      "tree": "combat",
+      "file": "combat_demolitions",
+      "ranks": [
+        0,
+        2,
+        1,
+        3,
+        4
+      ]
+    },
+    "Marksmanship": {
+      "tree": "combat",
+      "file": "combat_marksmanship",
+      "ranks": [
+        0,
+        1,
+        3,
+        2,
+        4
+      ]
+    },
+    "Rapid Reloading": {
+      "tree": "combat",
+      "file": "combat_rapidreloading",
+      "ranks": [
+        0,
+        1,
+        3,
+        4,
+        2
+      ]
+    },
+    "Sniper Certification": {
+      "tree": "combat",
+      "file": "combat_snipercertification",
+      "ranks": [
+        0,
+        2,
+        3,
+        1,
+        4
+      ]
+    },
+    "Targeting": {
+      "tree": "combat",
+      "file": "combat_targeting",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "Sharpshooting": {
+      "tree": "combat",
+      "file": "combat_sharpshooting",
+      "ranks": [
+        1,
+        0,
+        2,
+        4,
+        3
+      ]
+    },
+    "Crippling": {
+      "tree": "combat",
+      "file": "combat_crippling",
+      "ranks": [
+        0,
+        1,
+        3,
+        2,
+        4
+      ]
+    },
+    "Armor Penetration": {
+      "tree": "combat",
+      "file": "combat_armorpenetration",
+      "ranks": [
+        1,
+        0,
+        2,
+        4,
+        3
+      ]
+    },
+    "Astrodynamics": {
+      "tree": "science",
+      "file": "science_astrodynamics",
+      "ranks": [
+        0,
+        2,
+        1,
+        3,
+        4
+      ]
+    },
+    "Geology": {
+      "tree": "science",
+      "file": "science_geology",
+      "ranks": [
+        1,
+        0,
+        3,
+        2,
+        4
+      ]
+    },
+    "Medicine": {
+      "tree": "science",
+      "file": "science_medicine",
+      "ranks": [
+        0,
+        2,
+        1,
+        3,
+        4
+      ]
+    },
+    "Research Methods": {
+      "tree": "science",
+      "file": "science_researchmethods",
+      "ranks": [
+        0,
+        2,
+        1,
+        4,
+        3
+      ]
+    },
+    "Surveying": {
+      "tree": "science",
+      "file": "science_surveying",
+      "ranks": [
+        1,
+        0,
+        3,
+        2,
+        4
+      ]
+    },
+    "Zoology": {
+      "tree": "science",
+      "file": "science_zoology",
+      "ranks": [
+        0,
+        1,
+        2,
+        4,
+        3
+      ]
+    },
+    "Weapon Engineering": {
+      "tree": "science",
+      "file": "science_weaponengineering",
+      "ranks": [
+        2,
+        0,
+        1,
+        3,
+        4
+      ]
+    },
+    "Spacesuit Design": {
+      "tree": "science",
+      "file": "science_spacesuitdesign",
+      "ranks": [
+        0,
+        1,
+        3,
+        2,
+        4
+      ]
+    },
+    "Scanning": {
+      "tree": "science",
+      "file": "science_scanning",
+      "ranks": [
+        0,
+        2,
+        1,
+        4,
+        3
+      ]
+    },
+    "Botany": {
+      "tree": "science",
+      "file": "science_botany",
+      "ranks": [
+        0,
+        3,
+        2,
+        1,
+        4
+      ]
+    },
+    "Astrophysics": {
+      "tree": "science",
+      "file": "science_astrophysics",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "Chemistry": {
+      "tree": "science",
+      "file": "science_chemistry",
+      "ranks": [
+        1,
+        0,
+        2,
+        4,
+        3
+      ]
+    },
+    "Outpost Engineering": {
+      "tree": "science",
+      "file": "science_outpostengineering",
+      "ranks": [
+        1,
+        2,
+        0,
+        3,
+        4
+      ]
+    },
+    "Special Projects": {
+      "tree": "science",
+      "file": "science_specialprojects",
+      "ranks": [
+        1,
+        0,
+        2,
+        4,
+        3
+      ]
+    },
+    "Planetary Habitation": {
+      "tree": "science",
+      "file": "science_planetaryhabitation",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "Aneutronic Fusion": {
+      "tree": "science",
+      "file": "science_aneutronicfusion",
+      "ranks": [
+        0,
+        1,
+        3,
+        2,
+        4
+      ]
+    },
+    "Commerce": {
+      "tree": "social",
+      "file": "social_commerce",
+      "ranks": [
+        0,
+        2,
+        1,
+        4,
+        3
+      ]
+    },
+    "Gastronomy": {
+      "tree": "social",
+      "file": "social_gastronomy",
+      "ranks": [
+        1,
+        0,
+        2,
+        3,
+        4
+      ]
+    },
+    "Persuasion": {
+      "tree": "social",
+      "file": "social_persuasion",
+      "ranks": [
+        0,
+        1,
+        3,
+        2,
+        4
+      ]
+    },
+    "Scavenging": {
+      "tree": "social",
+      "file": "social_scavenging",
+      "ranks": [
+        0,
+        1,
+        4,
+        2,
+        3
+      ]
+    },
+    "Theft": {
+      "tree": "social",
+      "file": "social_theft",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "Negotiation": {
+      "tree": "social",
+      "file": "social_negotiation",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "Isolation": {
+      "tree": "social",
+      "file": "social_isolation",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "Intimidation": {
+      "tree": "social",
+      "file": "social_intimidation",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "Diplomacy": {
+      "tree": "social",
+      "file": "social_diplomacy",
+      "ranks": [
+        2,
+        1,
+        0,
+        3,
+        4
+      ]
+    },
+    "Deception": {
+      "tree": "social",
+      "file": "social_bargaining",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "Instigation": {
+      "tree": "social",
+      "file": "social_instigation",
+      "ranks": [
+        3,
+        0,
+        1,
+        2,
+        4
+      ]
+    },
+    "Leadership": {
+      "tree": "social",
+      "file": "social_leadership",
+      "ranks": [
+        0,
+        2,
+        1,
+        3,
+        4
+      ]
+    },
+    "Outpost Management": {
+      "tree": "social",
+      "file": "social_outpostmanagement",
+      "ranks": [
+        1,
+        0,
+        2,
+        4,
+        3
+      ]
+    },
+    "Xenosociology": {
+      "tree": "social",
+      "file": "social_xenosociology",
+      "ranks": [
+        0,
+        1,
+        3,
+        2,
+        4
+      ]
+    },
+    "Ship Command": {
+      "tree": "social",
+      "file": "social_shipcommand",
+      "ranks": [
+        0,
+        2,
+        1,
+        3,
+        4
+      ]
+    },
+    "Manipulation": {
+      "tree": "social",
+      "file": "social_manipulation",
+      "ranks": [
+        0,
+        1,
+        2,
+        4,
+        3
+      ]
+    },
+    "Ballistic Weapon Systems": {
+      "tree": "technology",
+      "file": "technology_ballisticweaponsystems",
+      "ranks": [
+        0,
+        3,
+        1,
+        2,
+        4
+      ]
+    },
+    "Boost Pack Training": {
+      "tree": "technology",
+      "file": "technology_boostpacktraining",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "Piloting": {
+      "tree": "technology",
+      "file": "technology_piloting",
+      "ranks": [
+        0,
+        1,
+        2,
+        4,
+        3
+      ]
+    },
+    "Security": {
+      "tree": "technology",
+      "file": "technology_security",
+      "ranks": [
+        1,
+        0,
+        3,
+        2,
+        4
+      ]
+    },
+    "Targeting Control Systems": {
+      "tree": "technology",
+      "file": "technology_targetingcontrolsystems",
+      "ranks": [
+        2,
+        0,
+        1,
+        3,
+        4
+      ]
+    },
+    "Shield Systems": {
+      "tree": "technology",
+      "file": "technology_shieldsystems",
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "Payloads": {
+      "tree": "technology",
+      "file": "technology_payloads",
+      "ranks": [
+        0,
+        1,
+        4,
+        3,
+        2
+      ]
+    },
+    "Engine Systems": {
+      "tree": "technology",
+      "file": "technology_enginesystems",
+      "ranks": [
+        0,
+        2,
+        1,
+        3,
+        4
+      ]
+    },
+    "Energy Weapon Systems": {
+      "tree": "technology",
+      "file": "technology_energyweaponsystems",
+      "ranks": [
+        1,
+        0,
+        2,
+        4,
+        3
+      ]
+    },
+    "Missile Weapon Systems": {
+      "tree": "technology",
+      "file": "technology_missileweaponsystems",
+      "ranks": [
+        0,
+        3,
+        2,
+        1,
+        4
+      ]
+    },
+    "Particle Beam Weapon Systems": {
+      "tree": "technology",
+      "file": "technology_particlebeamweaponsystems",
+      "ranks": [
+        1,
+        0,
+        2,
+        3,
+        4
+      ]
+    },
+    "Robotics": {
+      "tree": "technology",
+      "file": "technology_robotics",
+      "ranks": [
+        0,
+        1,
+        2,
+        4,
+        3
+      ]
+    },
+    "Starship Design": {
+      "tree": "technology",
+      "file": "technology_starshipdesign",
+      "ranks": [
+        0,
+        1,
+        3,
+        2,
+        4
+      ]
+    },
+    "Starship Engineering": {
+      "tree": "technology",
+      "file": "technology_starshipengineering",
+      "ranks": [
+        0,
+        2,
+        1,
+        3,
+        4
+      ]
+    },
+    "EM Weapon Systems": {
+      "tree": "technology",
+      "file": "technology_emweaponsystems",
+      "ranks": [
+        0,
+        1,
+        2,
+        4,
+        3
+      ]
+    },
+    "Boost Assault Training": {
+      "tree": "technology",
+      "file": "technology_boostassaulttraining",
+      "ranks": [
+        0,
+        1,
+        3,
+        2,
+        4
+      ]
+    },
+    "Automated Weapon Systems": {
+      "tree": "technology",
+      "file": "technology_turretweaponsystems",
+      "ranks": [
+        2,
+        0,
+        1,
+        3,
+        4
+      ]
+    }
+  },
+  "items": {
+    "Addichrone": {
+      "file": "Addichrone.png",
+      "type": "consumable"
+    },
+    "Alien Broth": {
+      "file": "Alien_Broth.png",
+      "type": "consumable"
+    },
+    "Alien Energy Drink": {
+      "file": "Alien_Energy_Drink.png",
+      "type": "consumable"
+    },
+    "Alien Genetic Material": {
+      "file": "Alien_Genetic_Material.png",
+      "type": "consumable"
+    },
+    "Alien Jerky": {
+      "file": "Alien_Jerky.jpg",
+      "type": "consumable"
+    },
+    "Alien Kebabs": {
+      "file": "Alien_Kebabs.png",
+      "type": "consumable"
+    },
+    "Alien Liquor": {
+      "file": "Alien_Liquor.png",
+      "type": "consumable"
+    },
+    "Alien Pie": {
+      "file": "Alien_Pie.png",
+      "type": "consumable"
+    },
+    "Alien Sandwich": {
+      "file": "Alien_Sandwich.jpg",
+      "type": "consumable"
+    },
+    "Alien Scramble": {
+      "file": "Alien_Scramble.png",
+      "type": "consumable"
+    },
+    "Alien Stew": {
+      "file": "Alien_Stew.png",
+      "type": "consumable"
+    },
+    "Alien Tea": {
+      "file": "Alien_Tea.png",
+      "type": "consumable"
+    },
+    "Alien Tonic": {
+      "file": "Alien_Tonic.png",
+      "type": "consumable"
+    },
+    "Antibiotics": {
+      "file": "Antibiotics.png",
+      "type": "consumable"
+    },
+    "Aurora": {
+      "file": "Aurora.png",
+      "type": "consumable"
+    },
+    "Baguette": {
+      "file": "Baguette.png",
+      "type": "consumable"
+    },
+    "Bandages": {
+      "file": "Bandages.png",
+      "type": "consumable"
+    },
+    "Beertini": {
+      "file": "Beertini.jpg",
+      "type": "consumable"
+    },
+    "Blend": {
+      "file": "Blend.png",
+      "type": "consumable"
+    },
+    "Boba Alien Tea": {
+      "file": "Boba_Alien_Tea.jpg",
+      "type": "consumable"
+    },
+    "Boudicca": {
+      "file": "Boudicca.png",
+      "type": "consumable"
+    },
+    "Butter": {
+      "file": "Butter.jpg",
+      "type": "consumable"
+    },
+    "Carrot": {
+      "file": "Carrot.png",
+      "type": "consumable"
+    },
+    "Celery": {
+      "file": "Celery.png",
+      "type": "consumable"
+    },
+    "Chandra Cabernet Sauvignon": {
+      "file": "Chandra_Cabernet_Sauvignon.png",
+      "type": "consumable"
+    },
+    "Chandra Merlot": {
+      "file": "Chandra_Merlot.png",
+      "type": "consumable"
+    },
+    "Chandra Pinot Noir": {
+      "file": "Chandra_Pinot_Noir.png",
+      "type": "consumable"
+    },
+    "Chandra Port": {
+      "file": "Chandra_Port.png",
+      "type": "consumable"
+    },
+    "Chandra Riesling": {
+      "file": "Chandra_Riesling.png",
+      "type": "consumable"
+    },
+    "Chandra Sauvignon Blanc": {
+      "file": "Chandra_Sauvignon_Blanc.png",
+      "type": "consumable"
+    },
+    "Cheese": {
+      "file": "Cheese.png",
+      "type": "consumable"
+    },
+    "Chunks Apple": {
+      "file": "Chunks_Apple.png",
+      "type": "consumable"
+    },
+    "Chunks Beef": {
+      "file": "Chunks_Beef.jpg",
+      "type": "consumable"
+    },
+    "Chunks Choco": {
+      "file": "Chunks_Choco.png",
+      "type": "consumable"
+    },
+    "Chunks Wine - Packaged": {
+      "file": "Chunks_Wine_-_Packaged.png",
+      "type": "consumable"
+    },
+    "Codos Crater": {
+      "file": "Codos_Crater.png",
+      "type": "consumable"
+    },
+    "CQB-X": {
+      "file": "CQB-X.png",
+      "type": "consumable"
+    },
+    "Creature Jam": {
+      "file": "Creature_Jam.jpg",
+      "type": "consumable"
+    },
+    "Dawn's Roost Strip": {
+      "file": "Dawn_s_Roost_Strip.jpg",
+      "type": "consumable"
+    },
+    "Erdebrau Dark Can": {
+      "file": "Erdebrau_Dark_Can.jpg",
+      "type": "consumable"
+    },
+    "Erdebrau Light Can": {
+      "file": "Erdebrau_Light_Can.png",
+      "type": "consumable"
+    },
+    "Erdebrau Pils Can": {
+      "file": "Erdebrau_Pils_Can.png",
+      "type": "consumable"
+    },
+    "Frostwolf": {
+      "file": "Frostwolf.png",
+      "type": "consumable"
+    },
+    "Fullfood Spiced Worms": {
+      "file": "Fullfood_Spiced_Worms.png",
+      "type": "consumable"
+    },
+    "Grapes": {
+      "file": "Grapes.png",
+      "type": "consumable"
+    },
+    "Heal Gel": {
+      "file": "Heal_Gel.png",
+      "type": "consumable"
+    },
+    "Heal Paste": {
+      "file": "Heal_Paste.png",
+      "type": "consumable"
+    },
+    "Hippolyta": {
+      "file": "Hippolyta.png",
+      "type": "consumable"
+    },
+    "Immobilizer": {
+      "file": "Immobilizer.png",
+      "type": "consumable"
+    },
+    "Injector": {
+      "file": "Injector.png",
+      "type": "consumable"
+    },
+    "Instant Oatmeal": {
+      "file": "Instant_Oatmeal.jpg",
+      "type": "consumable"
+    },
+    "Junk Flush": {
+      "file": "Junk_Flush.png",
+      "type": "consumable"
+    },
+    "Kefir": {
+      "file": "Kefir.png",
+      "type": "consumable"
+    },
+    "Lemon": {
+      "file": "Lemon.png",
+      "type": "consumable"
+    },
+    "Lettuce": {
+      "file": "Lettuce.png",
+      "type": "consumable"
+    },
+    "Lime": {
+      "file": "Lime.png",
+      "type": "consumable"
+    },
+    "Liver Pate": {
+      "file": "Liver_Pate.jpg",
+      "type": "consumable"
+    },
+    "Meal Pack - Chicken": {
+      "file": "Meal_Pack_-_Chicken.png",
+      "type": "consumable"
+    },
+    "Meatloaf": {
+      "file": "Meatloaf.jpg",
+      "type": "consumable"
+    },
+    "Med Pack": {
+      "file": "Med_Pack.png",
+      "type": "consumable"
+    },
+    "Midnight Delight": {
+      "file": "Midnight_Delight.jpg",
+      "type": "consumable"
+    },
+    "Milk": {
+      "file": "Milk.jpg",
+      "type": "consumable"
+    },
+    "Miso Soup Minislurp": {
+      "file": "Miso_Soup_Minislurp.jpg",
+      "type": "consumable"
+    },
+    "Miso Soup Multipack": {
+      "file": "Miso_Soup_Multipack.png",
+      "type": "consumable"
+    },
+    "Mochi": {
+      "file": "Mochi.jpg",
+      "type": "consumable"
+    },
+    "Neurajack": {
+      "file": "Neurajack.png",
+      "type": "consumable"
+    },
+    "O2 Shot": {
+      "file": "O2_Shot.png",
+      "type": "consumable"
+    },
+    "Onion": {
+      "file": "Onion.png",
+      "type": "consumable"
+    },
+    "Orange": {
+      "file": "Orange.png",
+      "type": "consumable"
+    },
+    "Pale Ale": {
+      "file": "Pale_Ale.png",
+      "type": "consumable"
+    },
+    "Panopticon": {
+      "file": "Panopticon.png",
+      "type": "consumable"
+    },
+    "Paramour": {
+      "file": "Paramour.png",
+      "type": "consumable"
+    },
+    "Peach": {
+      "file": "Peach.png",
+      "type": "consumable"
+    },
+    "Pear": {
+      "file": "Pear.png",
+      "type": "consumable"
+    },
+    "Penicillin X": {
+      "file": "Penicillin_X.png",
+      "type": "consumable"
+    },
+    "Pick-Me-Up": {
+      "file": "Pick-Me-Up.png",
+      "type": "consumable"
+    },
+    "Potato": {
+      "file": "Potato.png",
+      "type": "consumable"
+    },
+    "Raisin Bran Cereal": {
+      "file": "Raisin_Bran_Cereal.png",
+      "type": "consumable"
+    },
+    "Ramen Minibite": {
+      "file": "Ramen_Minibite.png",
+      "type": "consumable"
+    },
+    "Red Harvest Amber Ale": {
+      "file": "Red_Harvest_Amber_Ale.png",
+      "type": "consumable"
+    },
+    "Red Harvest Lentils": {
+      "file": "Red_Harvest_Lentils.png",
+      "type": "consumable"
+    },
+    "Red Harvest Milk Stout": {
+      "file": "Red_Harvest_Milk_Stout.png",
+      "type": "consumable"
+    },
+    "Red Harvest Naan": {
+      "file": "Red_Harvest_Naan.png",
+      "type": "consumable"
+    },
+    "Red Harvest Pale Ale": {
+      "file": "Red_Harvest_Pale_Ale.png",
+      "type": "consumable"
+    },
+    "Red Harvest Rye": {
+      "file": "Red_Harvest_Rye.jpg",
+      "type": "consumable"
+    },
+    "Red Harvest Single Malt Whiskey": {
+      "file": "Red_Harvest_Single_Malt_Whiskey.png",
+      "type": "consumable"
+    },
+    "Red Harvest Wheat": {
+      "file": "Red_Harvest_Wheat.png",
+      "type": "consumable"
+    },
+    "Red Harvest White": {
+      "file": "Red_Harvest_White.png",
+      "type": "consumable"
+    },
+    "Red Trench": {
+      "file": "Red_Trench.png",
+      "type": "consumable"
+    },
+    "Seaweed Minibite": {
+      "file": "Seaweed_Minibite.jpg",
+      "type": "consumable"
+    },
+    "Shepherd's Pie": {
+      "file": "Shepherd_s_Pie.png",
+      "type": "consumable"
+    },
+    "Ship Parts": {
+      "file": "Ship_Parts.png",
+      "type": "consumable"
+    },
+    "Snack Pack - Gummi Bugs": {
+      "file": "Snack_Pack_-_Gummi_Bugs.png",
+      "type": "consumable"
+    },
+    "Snake Oil": {
+      "file": "Snake_Oil.png",
+      "type": "consumable"
+    },
+    "Soba": {
+      "file": "Soba.png",
+      "type": "consumable"
+    },
+    "Soba Minibite": {
+      "file": "Soba_Minibite.png",
+      "type": "consumable"
+    },
+    "Solomon's Reserve": {
+      "file": "Solomon_s_Reserve.png",
+      "type": "consumable"
+    },
+    "Sparkling Water": {
+      "file": "Sparkling_Water.png",
+      "type": "consumable"
+    },
+    "Sparkling Wine": {
+      "file": "Sparkling_Wine.png",
+      "type": "consumable"
+    },
+    "Superfood Paste Set": {
+      "file": "Superfood_Paste_Set.jpg",
+      "type": "consumable"
+    },
+    "Supernova": {
+      "file": "Supernova.png",
+      "type": "consumable"
+    },
+    "Synapse Alpha": {
+      "file": "Synapse_Alpha.png",
+      "type": "consumable"
+    },
+    "Synthameat Chicken": {
+      "file": "Synthameat_Chicken.png",
+      "type": "consumable"
+    },
+    "Synthameat Ham": {
+      "file": "Synthameat_Ham.png",
+      "type": "consumable"
+    },
+    "Synthameat Turkey": {
+      "file": "Synthameat_Turkey.png",
+      "type": "consumable"
+    },
+    "Synthameat Veal": {
+      "file": "Synthameat_Veal.jpg",
+      "type": "consumable"
+    },
+    "Ta'Ameya Pita": {
+      "file": "Ta_Ameya_Pita.png",
+      "type": "consumable"
+    },
+    "TerraBrew Cappuccino": {
+      "file": "TerraBrew_Cappuccino.png",
+      "type": "consumable"
+    },
+    "Toast": {
+      "file": "Toast.png",
+      "type": "consumable"
+    },
+    "Tomato": {
+      "file": "Tomato.png",
+      "type": "consumable"
+    },
+    "Trauma Pack": {
+      "file": "Trauma_Pack.png",
+      "type": "consumable"
+    },
+    "Udon Minibite": {
+      "file": "Udon_Minibite.png",
+      "type": "consumable"
+    },
+    "Udon Multipack": {
+      "file": "Udon_Multipack.png",
+      "type": "consumable"
+    },
+    "Veggie Grinder": {
+      "file": "Veggie_Grinder.png",
+      "type": "consumable"
+    },
+    "Whiteout": {
+      "file": "Whiteout.png",
+      "type": "consumable"
+    },
+    "Yogurt": {
+      "file": "Yogurt.png",
+      "type": "consumable"
+    },
+    "Zipper Bandages": {
+      "file": "Zipper_Bandages.png",
+      "type": "consumable"
+    },
+    "Ace Sidearm": {
+      "file": "Ace_Sidearm.png",
+      "type": "weapon"
+    },
+    "Arc Welder": {
+      "file": "Arc_Welder.png",
+      "type": "weapon"
+    },
+    "Auto-Rivet": {
+      "file": "Auto-Rivet.png",
+      "type": "weapon"
+    },
+    "Barrow Knife": {
+      "file": "Barrow_Knife.png",
+      "type": "weapon"
+    },
+    "Beowulf": {
+      "file": "Beowulf.png",
+      "type": "weapon"
+    },
+    "Big Bang": {
+      "file": "Big_Bang.png",
+      "type": "weapon"
+    },
+    "Boom Boom": {
+      "file": "Boom_Boom.png",
+      "type": "weapon"
+    },
+    "Breach": {
+      "file": "Breach.png",
+      "type": "weapon"
+    },
+    "Bridger": {
+      "file": "Bridger.png",
+      "type": "weapon"
+    },
+    "Coachman": {
+      "file": "Coachman.png",
+      "type": "weapon"
+    },
+    "Cutter": {
+      "file": "Cutter.png",
+      "type": "weapon"
+    },
+    "Deadeye": {
+      "file": "Deadeye.png",
+      "type": "weapon"
+    },
+    "Elegance": {
+      "file": "Elegance.png",
+      "type": "weapon"
+    },
+    "Eon": {
+      "file": "Eon.png",
+      "type": "weapon"
+    },
+    "Equinox": {
+      "file": "Equinox.png",
+      "type": "weapon"
+    },
+    "Hard Target": {
+      "file": "Hard_Target.png",
+      "type": "weapon"
+    },
+    "Kodama": {
+      "file": "Kodama.png",
+      "type": "weapon"
+    },
+    "Kraken": {
+      "file": "Kraken.png",
+      "type": "weapon"
+    },
+    "Lawgiver": {
+      "file": "Lawgiver.png",
+      "type": "weapon"
+    },
+    "Maelstrom": {
+      "file": "Maelstrom.png",
+      "type": "weapon"
+    },
+    "Magpulse": {
+      "file": "Magpulse.png",
+      "type": "weapon"
+    },
+    "Magshear": {
+      "file": "Magshear.png",
+      "type": "weapon"
+    },
+    "Magshot": {
+      "file": "Magshot.png",
+      "type": "weapon"
+    },
+    "Microgun": {
+      "file": "Microgun.png",
+      "type": "weapon"
+    },
+    "N67 Smartgun": {
+      "file": "N67_Smartgun.png",
+      "type": "weapon"
+    },
+    "Novablast Disruptor": {
+      "file": "Novablast_Disruptor.png",
+      "type": "weapon"
+    },
+    "Novalight": {
+      "file": "Novalight.png",
+      "type": "weapon"
+    },
+    "Old Earth Assault Rifle": {
+      "file": "Old_Earth_Assault_Rifle.png",
+      "type": "weapon"
+    },
+    "Old Earth Hunting Rifle": {
+      "file": "Old_Earth_Hunting_Rifle.png",
+      "type": "weapon"
+    },
+    "Old Earth Pistol": {
+      "file": "Old_Earth_Pistol.png",
+      "type": "weapon"
+    },
+    "Old Earth Shotgun": {
+      "file": "Old_Earth_Shotgun.png",
+      "type": "weapon"
+    },
+    "Orion": {
+      "file": "Orion.png",
+      "type": "weapon"
+    },
+    "Pacifier": {
+      "file": "Pacifier.png",
+      "type": "weapon"
+    },
+    "Rapidshot": {
+      "file": "Rapidshot.png",
+      "type": "weapon"
+    },
+    "Rattler": {
+      "file": "Rattler.png",
+      "type": "weapon"
+    },
+    "Razorback": {
+      "file": "Razorback.png",
+      "type": "weapon"
+    },
+    "Regulator": {
+      "file": "Regulator.png",
+      "type": "weapon"
+    },
+    "Short Circuit": {
+      "file": "Short_Circuit.png",
+      "type": "weapon"
+    },
+    "Shotty": {
+      "file": "Shotty.png",
+      "type": "weapon"
+    },
+    "Sidestar": {
+      "file": "Sidestar.png",
+      "type": "weapon"
+    },
+    "Solstice": {
+      "file": "Solstice.png",
+      "type": "weapon"
+    },
+    "Tanto": {
+      "file": "Tanto.png",
+      "type": "weapon"
+    },
+    "The Buzzcut": {
+      "file": "The_Buzzcut.png",
+      "type": "weapon"
+    },
+    "The Prime": {
+      "file": "The_Prime.png",
+      "type": "weapon"
+    },
+    "The Zapper": {
+      "file": "The_Zapper.png",
+      "type": "weapon"
+    },
+    "Tombstone": {
+      "file": "Tombstone.png",
+      "type": "weapon"
+    },
+    "UC Naval Cutlass": {
+      "file": "UC_Naval_Cutlass.png",
+      "type": "weapon"
+    },
+    "Urban Eagle": {
+      "file": "Urban_Eagle.png",
+      "type": "weapon"
+    },
+    "Wakizashi": {
+      "file": "Wakizashi.png",
+      "type": "weapon"
+    },
+    "Magsniper": {
+      "file": "Magsniper.png",
+      "type": "weapon"
+    },
+    "Magstorm": {
+      "file": "Magstorm.png",
+      "type": "weapon"
+    },
+    "Osmium Dagger": {
+      "file": "Osmium_Dagger.png",
+      "type": "weapon"
+    },
+    "The Spacer": {
+      "file": "The_Spacer.png",
+      "type": "weapon"
+    },
+    "Mindtear": {
+      "file": "Mindtear.png",
+      "type": "weapon"
+    },
+    "Feather": {
+      "file": "Feather.png",
+      "type": "weapon"
+    },
+    "Fury": {
+      "file": "Fury.png",
+      "type": "weapon"
+    },
+    "Hunterwulf": {
+      "file": "Hunterwulf.png",
+      "type": "weapon"
+    },
+    "Power Beat": {
+      "file": "Power_Beat.png",
+      "type": "weapon"
+    },
+    "Ambassador": {
+      "file": "Ambassador.png",
+      "type": "weapon"
+    },
+    "Shattered Shock": {
+      "file": "Shattered_Shock.png",
+      "type": "weapon"
+    },
+    "Revenant": {
+      "file": "Revenant.jpg",
+      "type": "weapon"
+    },
+    "Keelhauler": {
+      "file": "Keelhauler.png",
+      "type": "weapon"
+    },
+    "Tempest": {
+      "file": "Tempest.png",
+      "type": "weapon"
+    },
+    "Acid Rain": {
+      "file": "Acid_Rain.png",
+      "type": "weapon"
+    },
+    "Justifier": {
+      "file": "Justifier.png",
+      "type": "weapon"
+    },
+    "Fiscal Quarter": {
+      "file": "Fiscal_Quarter.png",
+      "type": "weapon"
+    },
+    "Deimos Cap": {
+      "file": "Deimos_Cap.jpg",
+      "type": "apparel"
+    },
+    "Freestar Dustwear": {
+      "file": "Freestar_Dustwear.png",
+      "type": "apparel"
+    },
+    "Ranger Duelwear": {
+      "file": "Ranger_Duelwear.png",
+      "type": "apparel"
+    },
+    "UC Navy Armored Fatigues": {
+      "file": "UC_Navy_Armored_Fatigues.png",
+      "type": "apparel"
+    },
+    "UC Navy Duty Fatigues": {
+      "file": "UC_Navy_Duty_Fatigues.png",
+      "type": "apparel"
+    },
+    "UC Navy Officer Uniform": {
+      "file": "UC_Navy_Officer_Uniform.png",
+      "type": "apparel"
+    },
+    "UC Navy Recon Fatigues": {
+      "file": "UC_Navy_Recon_Fatigues.png",
+      "type": "apparel"
+    },
+    "Vanguard Officer Uniform": {
+      "file": "Vanguard_Officer_Uniform.png",
+      "type": "apparel"
+    },
+    "Adaptive Frame": {
+      "file": "Adaptive_Frame.png",
+      "type": "resource"
+    },
+    "Adhesive": {
+      "file": "Adhesive.png",
+      "type": "resource"
+    },
+    "Aldumite Drilling Rig": {
+      "file": "Aldumite_Drilling_Rig.png",
+      "type": "resource"
+    },
+    "Alkanes": {
+      "file": "Alkanes.jpg",
+      "type": "resource"
+    },
+    "Aluminum": {
+      "file": "Aluminum.jpg",
+      "type": "resource"
+    },
+    "Amino Acids": {
+      "file": "Amino_Acids.jpg",
+      "type": "resource"
+    },
+    "Antimicrobial": {
+      "file": "Antimicrobial.jpg",
+      "type": "resource"
+    },
+    "Antimony": {
+      "file": "Antimony.png",
+      "type": "resource"
+    },
+    "Aqueous Hematite": {
+      "file": "Aqueous_Hematite.png",
+      "type": "resource"
+    },
+    "Austenitic Manifold": {
+      "file": "Austenitic_Manifold.png",
+      "type": "resource"
+    },
+    "Benzene": {
+      "file": "Benzene.png",
+      "type": "resource"
+    },
+    "Beryllium": {
+      "file": "Beryllium.png",
+      "type": "resource"
+    },
+    "Biosuppressant": {
+      "file": "Biosuppressant.jpg",
+      "type": "resource"
+    },
+    "Caelumite": {
+      "file": "Caelumite.jpg",
+      "type": "resource"
+    },
+    "Caesium": {
+      "file": "Caesium.png",
+      "type": "resource"
+    },
+    "Carboxylic Acids": {
+      "file": "Carboxylic_Acids.jpg",
+      "type": "resource"
+    },
+    "Chlorine": {
+      "file": "Chlorine.jpg",
+      "type": "resource"
+    },
+    "Chlorosilanes": {
+      "file": "Chlorosilanes.jpg",
+      "type": "resource"
+    },
+    "Cobalt": {
+      "file": "Cobalt.jpg",
+      "type": "resource"
+    },
+    "Comm Relay": {
+      "file": "Comm_Relay.png",
+      "type": "resource"
+    },
+    "Control Rod": {
+      "file": "Control_Rod.png",
+      "type": "resource"
+    },
+    "Copper": {
+      "file": "Copper.png",
+      "type": "resource"
+    },
+    "Cosmetic": {
+      "file": "Cosmetic.jpg",
+      "type": "resource"
+    },
+    "Drilling Rig": {
+      "file": "Drilling_Rig.png",
+      "type": "resource"
+    },
+    "Dysprosium": {
+      "file": "Dysprosium.png",
+      "type": "resource"
+    },
+    "Europium": {
+      "file": "Europium.jpg",
+      "type": "resource"
+    },
+    "Fiber": {
+      "file": "Fiber.png",
+      "type": "resource"
+    },
+    "Fluorine": {
+      "file": "Fluorine.jpg",
+      "type": "resource"
+    },
+    "Gold": {
+      "file": "Gold.png",
+      "type": "resource"
+    },
+    "Hallucinogen": {
+      "file": "Hallucinogen.jpg",
+      "type": "resource"
+    },
+    "High-Tensile Spidroin": {
+      "file": "High-Tensile_Spidroin.png",
+      "type": "resource"
+    },
+    "Hypercatalyst": {
+      "file": "Hypercatalyst.png",
+      "type": "resource"
+    },
+    "Indicite": {
+      "file": "Indicite.jpg",
+      "type": "resource"
+    },
+    "Indicite Wafer": {
+      "file": "Indicite_Wafer.png",
+      "type": "resource"
+    },
+    "Ionic Liquids": {
+      "file": "Ionic_Liquids.jpg",
+      "type": "resource"
+    },
+    "Iridium": {
+      "file": "Iridium.jpg",
+      "type": "resource"
+    },
+    "Iron": {
+      "file": "Iron.png",
+      "type": "resource"
+    },
+    "Isocentered Magnet": {
+      "file": "Isocentered_Magnet.png",
+      "type": "resource"
+    },
+    "Isotopic Coolant": {
+      "file": "Isotopic_Coolant.png",
+      "type": "resource"
+    },
+    "Lead": {
+      "file": "Lead.jpg",
+      "type": "resource"
+    },
+    "Lithium": {
+      "file": "Lithium.png",
+      "type": "resource"
+    },
+    "Lubricant": {
+      "file": "Lubricant.png",
+      "type": "resource"
+    },
+    "Mag Pressure Tank": {
+      "file": "Mag_Pressure_Tank.png",
+      "type": "resource"
+    },
+    "Membrane": {
+      "file": "Membrane.jpg",
+      "type": "resource"
+    },
+    "Metabolic Agent": {
+      "file": "Metabolic_Agent.jpg",
+      "type": "resource"
+    },
+    "Microsecond Regulator": {
+      "file": "Microsecond_Regulator.png",
+      "type": "resource"
+    },
+    "Molecular Sieve": {
+      "file": "Molecular_Sieve.png",
+      "type": "resource"
+    },
+    "Monopropellant": {
+      "file": "Monopropellant.png",
+      "type": "resource"
+    },
+    "Neodymium": {
+      "file": "Neodymium.jpg",
+      "type": "resource"
+    },
+    "Nuclear Fuel Rod": {
+      "file": "Nuclear_Fuel_Rod.png",
+      "type": "resource"
+    },
+    "Nutrient": {
+      "file": "Nutrient.jpg",
+      "type": "resource"
+    },
+    "Palladium": {
+      "file": "Palladium.jpg",
+      "type": "resource"
+    },
+    "Paramagnon Conductor": {
+      "file": "Paramagnon_Conductor.png",
+      "type": "resource"
+    },
+    "Pigment": {
+      "file": "Pigment.jpg",
+      "type": "resource"
+    },
+    "Platinum": {
+      "file": "Platinum.jpg",
+      "type": "resource"
+    },
+    "Plutonium": {
+      "file": "Plutonium.png",
+      "type": "resource"
+    },
+    "Polymer": {
+      "file": "Polymer.png",
+      "type": "resource"
+    },
+    "Polytextile": {
+      "file": "Polytextile.png",
+      "type": "resource"
+    },
+    "Positron Battery": {
+      "file": "Positron_Battery.png",
+      "type": "resource"
+    },
+    "Power Circuit": {
+      "file": "Power_Circuit.png",
+      "type": "resource"
+    },
+    "Reactive Gauge": {
+      "file": "Reactive_Gauge.png",
+      "type": "resource"
+    },
+    "Rothicite Magnet": {
+      "file": "Rothicite_Magnet.png",
+      "type": "resource"
+    },
+    "Sealant": {
+      "file": "Sealant.png",
+      "type": "resource"
+    },
+    "Sedative": {
+      "file": "Sedative.png",
+      "type": "resource"
+    },
+    "Semimetal Wafer": {
+      "file": "Semimetal_Wafer.png",
+      "type": "resource"
+    },
+    "Silver": {
+      "file": "Silver.png",
+      "type": "resource"
+    },
+    "Solvent": {
+      "file": "Solvent.jpg",
+      "type": "resource"
+    },
+    "Spice": {
+      "file": "Spice.jpg",
+      "type": "resource"
+    },
+    "Sterile Nanotubes": {
+      "file": "Sterile_Nanotubes.png",
+      "type": "resource"
+    },
+    "Structural Material": {
+      "file": "Structural_Material.jpg",
+      "type": "resource"
+    },
+    "Substrate Molecule Sieve": {
+      "file": "Substrate_Molecule_Sieve.png",
+      "type": "resource"
+    },
+    "Supercooled Magnet": {
+      "file": "Supercooled_Magnet.png",
+      "type": "resource"
+    },
+    "Tantalum": {
+      "file": "Tantalum.png",
+      "type": "resource"
+    },
+    "Tasine": {
+      "file": "Tasine.jpg",
+      "type": "resource"
+    },
+    "Tasine Superconductor": {
+      "file": "Tasine_Superconductor.png",
+      "type": "resource"
+    },
+    "Tau Grade Rheostat": {
+      "file": "Tau_Grade_Rheostat.png",
+      "type": "resource"
+    },
+    "Titanium": {
+      "file": "Titanium.jpg",
+      "type": "resource"
+    },
+    "Tungsten": {
+      "file": "Tungsten.png",
+      "type": "resource"
+    },
+    "Uranium": {
+      "file": "Uranium.jpg",
+      "type": "resource"
+    },
+    "Veryl-Treated Manifold": {
+      "file": "Veryl-Treated_Manifold.png",
+      "type": "resource"
+    },
+    "Vytinium Fuel Rod": {
+      "file": "Vytinium_Fuel_Rod.png",
+      "type": "resource"
+    },
+    "Water": {
+      "file": "Water.jpg",
+      "type": "resource"
+    },
+    "Xenon": {
+      "file": "Xenon.jpg",
+      "type": "resource"
+    },
+    "Ytterbium": {
+      "file": "Ytterbium.jpg",
+      "type": "resource"
+    },
+    "Zero Wire": {
+      "file": "Zero_Wire.png",
+      "type": "resource"
+    },
+    "Zero-G Gimbal": {
+      "file": "Zero-G_Gimbal.png",
+      "type": "resource"
+    }
+  }
+}
