@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, type ViewStyle, type StyleProp } from 'react-native';
+import { type ImageStyle, type StyleProp } from 'react-native';
 import { Image as ExpoImage } from 'expo-image';
 import {
   getSkillImageUrl,
@@ -14,14 +14,14 @@ interface SkillImageProps {
   name: string;
   rank?: number;
   size?: number;
-  style?: StyleProp<ViewStyle>;
+  style?: StyleProp<ImageStyle>;
 }
 
 interface ItemImageProps {
   kind: ItemType;
   name: string;
   size?: number;
-  style?: StyleProp<ViewStyle>;
+  style?: StyleProp<ImageStyle>;
 }
 
 export type GameImageProps = SkillImageProps | ItemImageProps;
@@ -33,23 +33,18 @@ export function GameImage(props: GameImageProps) {
   const [failed, setFailed] = useState(false);
 
   let uri: string | null = null;
-  let placeholderType: ItemType | 'skill' = kind;
+  let placeholderType: ItemType = kind === 'skill' ? 'resource' : kind;
 
   if (kind === 'skill') {
     const rank = (props as SkillImageProps).rank ?? 0;
     uri = getSkillImageUrl(name, rank);
-    placeholderType = 'skill';
   } else {
     uri = getItemImageUrl(name);
     placeholderType = getItemType(name) ?? kind;
   }
 
   if (!uri || failed) {
-    return (
-      <View style={style}>
-        <PlaceholderIcon type={placeholderType} size={size} />
-      </View>
-    );
+    return <PlaceholderIcon type={placeholderType} size={size} style={style as ImageStyle} />;
   }
 
   return (
