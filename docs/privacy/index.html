@@ -124,14 +124,14 @@
   <div class="container">
     <h1>Privacy Policy</h1>
     <p class="subtitle">Starfield Companion by Alex Margulis</p>
-    <span class="effective-date">Effective March 18, 2026</span>
+    <span class="effective-date">Effective March 19, 2026</span>
 
     <h2>Overview</h2>
     <p>
-      Starfield Companion is an offline reference app for the video game Starfield. It lets you
-      browse and search bundled game data on your phone. The app does not require an internet
-      connection to function and does not have user accounts. We do not intentionally collect
-      personal information.
+      Starfield Companion is a reference app for the video game Starfield. It lets you
+      browse and search game data on your phone. Core data is bundled for offline use;
+      images are loaded from a CDN and cached locally. The app does not have user accounts.
+      We do not intentionally collect personal information.
     </p>
 
     <h2>Data Collection</h2>
@@ -146,9 +146,14 @@
       </p>
     </div>
 
-    <h2>Network Access &amp; OTA Updates</h2>
+    <h2>Network Access</h2>
     <p>
-      The app connects to Expo's servers solely to check for and download over-the-air (OTA)
+      The app makes network requests for two purposes:
+    </p>
+
+    <p><strong>1. OTA Updates</strong></p>
+    <p>
+      The app connects to Expo's servers to check for and download over-the-air (OTA)
       application updates. To our knowledge, these requests include only non-identifying
       technical metadata:
     </p>
@@ -158,18 +163,36 @@
       <li>The developer's project ID (identifies the app, not the user)</li>
       <li>The current update ID (so the server knows whether a new update is available)</li>
     </ul>
+
+    <p><strong>2. Game Images</strong></p>
     <p>
-      Expo may receive limited technical information necessary to deliver updates.
-      No other network requests are made by the app.
+      When you view skill icons or item images that are not bundled with the app, these are
+      fetched from GitHub Pages (charnel.github.io) and cached locally on your device for
+      subsequent offline use. These requests transmit only the standard HTTP headers your
+      device sends with any web request (e.g. IP address, user-agent). No personal data,
+      identifiers, or usage analytics are included.
+    </p>
+    <p class="muted">
+      A small set of default skill icons is bundled directly with the app for immediate
+      offline access. All other images are loaded on-demand and cached to disk after first
+      retrieval.
     </p>
 
     <h2>Third-Party Services</h2>
-    <p>
-      <a href="https://expo.dev/eas" target="_blank" rel="noopener">Expo</a>
-      is used only to deliver OTA updates. For information on how Expo handles data, see
-      <a href="https://expo.dev/privacy-explained" target="_blank" rel="noopener">Expo's privacy documentation</a>.
-      No other third-party services are used.
-    </p>
+    <ul>
+      <li>
+        <a href="https://expo.dev/eas" target="_blank" rel="noopener">Expo</a> —
+        delivers OTA updates. See
+        <a href="https://expo.dev/privacy-explained" target="_blank" rel="noopener">Expo's privacy documentation</a>.
+      </li>
+      <li>
+        <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> —
+        hosts game images (skill icons and item images) served as static files.
+        GitHub's standard server logs may record IP addresses; see
+        <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub's privacy statement</a>.
+      </li>
+    </ul>
+    <p>No other third-party services are used.</p>
 
     <h2>Analytics &amp; Advertising</h2>
     <p>
@@ -186,8 +209,9 @@
 
     <h2>Data Security</h2>
     <p>
-      All game data is bundled within the app at build time and stored locally on your device.
-      OTA update checks use HTTPS encryption in transit.
+      All game data (text, stats, recipes) is bundled within the app at build time and stored
+      locally on your device. Game images are fetched over HTTPS and cached locally.
+      OTA update checks also use HTTPS encryption in transit.
     </p>
 
     <h2>Changes to This Policy</h2>
