@@ -3,15 +3,18 @@ import { View, Text, Pressable, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { colors, spacing, fonts, fontSize } from '../theme';
 import { humanizeKey } from '../utils/format';
+import { GameImage } from './GameImage';
+import type { ItemType } from '../data/imageRegistry';
 
 interface ItemRowProps {
   item: Record<string, unknown>;
   nameField: string;
   listFields: string[];
   onPress: () => void;
+  imageType?: ItemType | null;
 }
 
-export function ItemRow({ item, nameField, listFields, onPress }: ItemRowProps) {
+export function ItemRow({ item, nameField, listFields, onPress, imageType }: ItemRowProps) {
   const name = String(item[nameField] ?? 'Unknown');
 
   return (
@@ -19,6 +22,9 @@ export function ItemRow({ item, nameField, listFields, onPress }: ItemRowProps) 
       style={({ pressed }) => [styles.container, pressed && styles.pressed]}
       onPress={onPress}
     >
+      {imageType && (
+        <GameImage kind={imageType} name={name} size={44} style={styles.thumb} />
+      )}
       <View style={styles.content}>
         <Text style={styles.name} numberOfLines={1}>
           {name}
@@ -49,10 +55,14 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     alignItems: 'center',
-    paddingVertical: spacing.md,
+    paddingVertical: spacing.sm,
     paddingHorizontal: spacing.lg,
     borderBottomWidth: StyleSheet.hairlineWidth,
     borderBottomColor: colors.border,
+  },
+  thumb: {
+    marginRight: spacing.md,
+    borderRadius: 4,
   },
   pressed: {
     backgroundColor: colors.surfaceLight,

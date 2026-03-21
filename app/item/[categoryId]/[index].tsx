@@ -1,9 +1,11 @@
 import React from 'react';
-import { ScrollView, StyleSheet } from 'react-native';
+import { View, ScrollView, StyleSheet } from 'react-native';
 import { useLocalSearchParams, Stack } from 'expo-router';
-import { colors, fonts, fontSize, letterSpacing } from '../../../src/theme';
+import { colors, spacing, fonts, fontSize, letterSpacing } from '../../../src/theme';
 import { useCategory } from '../../../src/hooks/useCategory';
 import { FieldTable } from '../../../src/components/FieldTable';
+import { GameImage } from '../../../src/components/GameImage';
+import { getCategoryImageType } from '../../../src/data/imageRegistry';
 
 export default function ItemDetailScreen() {
   const { categoryId, index } = useLocalSearchParams<{
@@ -20,6 +22,7 @@ export default function ItemDetailScreen() {
   }
 
   const name = String(item[category.nameField] ?? 'Details');
+  const imageType = getCategoryImageType(categoryId ?? '');
 
   return (
     <ScrollView style={styles.screen} contentContainerStyle={styles.content}>
@@ -35,6 +38,11 @@ export default function ItemDetailScreen() {
           headerShadowVisible: false,
         }}
       />
+      {imageType && (
+        <View style={styles.heroContainer}>
+          <GameImage kind={imageType} name={name} size={180} />
+        </View>
+      )}
       <FieldTable item={item} nameField={category.nameField} />
     </ScrollView>
   );
@@ -47,5 +55,10 @@ const styles = StyleSheet.create({
   },
   content: {
     paddingBottom: 60,
+  },
+  heroContainer: {
+    alignItems: 'center',
+    paddingTop: spacing.lg,
+    paddingBottom: spacing.sm,
   },
 });

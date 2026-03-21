@@ -38,3 +38,16 @@ export function hasSkillImage(skillName: string): boolean {
 export function hasItemImage(itemName: string): boolean {
   return itemName in items;
 }
+
+const categoryToImageType: Record<string, ItemType> = {
+  weapons: 'weapon',
+  pistols: 'weapon',
+  shotguns: 'weapon',
+  apparel: 'apparel',
+  consumables: 'consumable',
+  resources: 'resource',
+};
+
+export function getCategoryImageType(categoryId: string): ItemType | null {
+  return categoryToImageType[categoryId] ?? null;
+}
