@@ -30,7 +30,6 @@ import galaxy from './json/galaxy.json';
 import temples from './json/temples.json';
 
 import resources from './json/resources.json';
-import materials from './json/Materials.json';
 import consumables from './json/Consumables.json';
 
 import recipes from './json/recipes.json';
@@ -325,23 +324,29 @@ const categories: CategoryDefinition[] = [
     id: 'resources',
     label: 'Resources',
     icon: 'diamond-outline',
-    description: 'Manufactured and organic resources',
+    description: 'Manufactured components and compounds',
     group: 'items',
-    data: () => resources as Record<string, unknown>[],
+    data: () =>
+      (resources as Record<string, unknown>[]).filter(
+        (r) => r.type === 'manufactured',
+      ),
     nameField: 'resource',
-    searchFields: ['resource', 'shortName', 'type', 'rarity'],
-    listFields: ['rarity', 'type', 'value'],
+    searchFields: ['resource', 'shortName', 'rarity'],
+    listFields: ['rarity', 'value'],
   },
   {
     id: 'materials',
     label: 'Materials',
     icon: 'layers-outline',
-    description: 'Raw crafting materials',
+    description: 'Raw inorganic and organic materials',
     group: 'items',
-    data: () => materials as Record<string, unknown>[],
-    nameField: 'name',
-    searchFields: ['name', 'symbol', 'rarity'],
-    listFields: ['symbol', 'rarity', 'value'],
+    data: () =>
+      (resources as Record<string, unknown>[]).filter(
+        (r) => r.type === 'inorganic' || r.type === 'organic',
+      ),
+    nameField: 'resource',
+    searchFields: ['resource', 'shortName', 'type', 'rarity'],
+    listFields: ['shortName', 'rarity', 'type'],
   },
   {
     id: 'consumables',

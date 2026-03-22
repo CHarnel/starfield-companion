@@ -6,15 +6,13 @@ import { useCategory } from '../../src/hooks/useCategory';
 import { useFilteredList } from '../../src/hooks/useFilteredList';
 import { SearchBar } from '../../src/components/SearchBar';
 import { ItemRow } from '../../src/components/ItemRow';
-import { getCategoryImageType } from '../../src/data/imageRegistry';
+import { getImageTypeForItem } from '../../src/data/imageRegistry';
 
 export default function CategoryScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const router = useRouter();
   const { category, data } = useCategory(id);
   const { filter, setFilter, filtered } = useFilteredList(data, category);
-  const imageType = getCategoryImageType(id ?? '');
-
   if (!category) {
     return (
       <View style={styles.screen}>
@@ -58,7 +56,7 @@ export default function CategoryScreen() {
               item={item}
               nameField={category.nameField}
               listFields={category.listFields}
-              imageType={imageType}
+              imageType={getImageTypeForItem(id ?? '', item)}
               onPress={() => {
                 if (category.id === 'galaxy') {
                   const planetName = String(item[category.nameField] ?? '');

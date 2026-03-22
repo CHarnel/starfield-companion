@@ -2,7 +2,7 @@ import manifest from '../../docs/images/manifest.json';
 
 const CDN_BASE = 'https://charnel.github.io/starfield-companion/images';
 
-export type ItemType = 'weapon' | 'apparel' | 'consumable' | 'resource';
+export type ItemType = 'weapon' | 'apparel' | 'consumable' | 'resource' | 'material';
 
 type SkillEntry = { tree: string; file: string; ranks: number[] };
 type ItemEntry = { file: string; type: string };
@@ -46,8 +46,16 @@ const categoryToImageType: Record<string, ItemType> = {
   apparel: 'apparel',
   consumables: 'consumable',
   resources: 'resource',
+  materials: 'material',
 };
 
 export function getCategoryImageType(categoryId: string): ItemType | null {
+  return categoryToImageType[categoryId] ?? null;
+}
+
+export function getImageTypeForItem(
+  categoryId: string,
+  item: Record<string, unknown>,
+): ItemType | null {
   return categoryToImageType[categoryId] ?? null;
 }

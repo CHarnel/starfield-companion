@@ -7,6 +7,7 @@ const images: Record<ItemType, number> = {
   apparel: require('../../assets/images/placeholders/apparel.png'),
   consumable: require('../../assets/images/placeholders/consumable.png'),
   resource: require('../../assets/images/placeholders/resource.png'),
+  material: require('../../assets/images/placeholders/material.png'),
 };
 
 interface Props {

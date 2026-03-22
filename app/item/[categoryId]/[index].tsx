@@ -5,7 +5,7 @@ import { colors, spacing, fonts, fontSize, letterSpacing } from '../../../src/th
 import { useCategory } from '../../../src/hooks/useCategory';
 import { FieldTable } from '../../../src/components/FieldTable';
 import { GameImage } from '../../../src/components/GameImage';
-import { getCategoryImageType } from '../../../src/data/imageRegistry';
+import { getImageTypeForItem } from '../../../src/data/imageRegistry';
 
 export default function ItemDetailScreen() {
   const { categoryId, index } = useLocalSearchParams<{
@@ -22,7 +22,7 @@ export default function ItemDetailScreen() {
   }
 
   const name = String(item[category.nameField] ?? 'Details');
-  const imageType = getCategoryImageType(categoryId ?? '');
+  const imageType = getImageTypeForItem(categoryId ?? '', item);
 
   return (
     <ScrollView style={styles.screen} contentContainerStyle={styles.content}>

@@ -4,7 +4,8 @@ import { Image as ExpoImage } from 'expo-image';
 import {
   getSkillImageUrl,
   getItemImageUrl,
-  getItemType,
+  hasItemImage,
+  hasSkillImage,
   type ItemType,
 } from '../data/imageRegistry';
 import { PlaceholderIcon } from './PlaceholderIcon';
@@ -15,6 +16,7 @@ interface SkillImageProps {
   rank?: number;
   size?: number;
   style?: StyleProp<ImageStyle>;
+  fallback?: 'placeholder' | 'none';
 }
 
 interface ItemImageProps {
@@ -22,6 +24,7 @@ interface ItemImageProps {
   name: string;
   size?: number;
   style?: StyleProp<ImageStyle>;
+  fallback?: 'placeholder' | 'none';
 }
 
 export type GameImageProps = SkillImageProps | ItemImageProps;
@@ -29,21 +32,21 @@ export type GameImageProps = SkillImageProps | ItemImageProps;
 const BLURHASH_DARK = 'L02rs+xb00Ri~Wxb00WB00WB00WB';
 
 export function GameImage(props: GameImageProps) {
-  const { kind, name, size = 80, style } = props;
+  const { kind, name, size = 80, style, fallback = 'placeholder' } = props;
   const [failed, setFailed] = useState(false);
 
   let uri: string | null = null;
-  let placeholderType: ItemType = kind === 'skill' ? 'resource' : kind;
 
   if (kind === 'skill') {
     const rank = (props as SkillImageProps).rank ?? 0;
     uri = getSkillImageUrl(name, rank);
   } else {
     uri = getItemImageUrl(name);
-    placeholderType = getItemType(name) ?? kind;
   }
 
   if (!uri || failed) {
+    if (fallback === 'none') return null;
+    const placeholderType: ItemType = kind === 'skill' ? 'resource' : kind;
     return <PlaceholderIcon type={placeholderType} size={size} style={style as ImageStyle} />;
   }
 
@@ -58,4 +61,8 @@ export function GameImage(props: GameImageProps) {
       onError={() => setFailed(true)}
     />
   );
+}
+
+export function hasImage(kind: 'skill' | ItemType, name: string, rank = 0): boolean {
+  return kind === 'skill' ? hasSkillImage(name) : hasItemImage(name);
 }
