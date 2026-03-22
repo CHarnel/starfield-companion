@@ -16,7 +16,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { colors, spacing, fonts, fontSize, letterSpacing } from '../../src/theme';
 import { ScreenHeader } from '../../src/components/ScreenHeader';
 import skillsData from '../../src/data/json/Skills.json';
-import { getSkillImageUrl } from '../../src/data/imageRegistry';
+import { getSkillIcon } from '../../src/data/imageRegistry';
 
 interface Skill {
   name: string;
@@ -92,7 +92,7 @@ export default function SkillsScreen() {
             <Text style={styles.tierHeader}>{tierGroup.tier.toUpperCase()}</Text>
             <View style={[styles.skillRow, { gap }]}>
               {tierGroup.skills.map((skill) => {
-                const imageUrl = getSkillImageUrl(skill.name, 0);
+                const iconSource = getSkillIcon(skill.name);
                 return (
                   <Pressable
                     key={skill.name}
@@ -107,9 +107,9 @@ export default function SkillsScreen() {
                       )
                     }
                   >
-                    {imageUrl ? (
+                    {iconSource ? (
                       <Image
-                        source={{ uri: imageUrl }}
+                        source={iconSource}
                         style={[
                           styles.skillImage,
                           { width: imageSize, height: imageSize },

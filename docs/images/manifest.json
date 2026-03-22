@@ -113,7 +113,7 @@
     "Cellular Regeneration": {
       "tree": "physical",
       "file": "physical_cellularregeneration",
-      "ranks": []
+      "ranks": [0, 1, 2, 3, 4]
     },
     "Decontamination": {
       "tree": "physical",
