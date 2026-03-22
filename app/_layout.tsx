@@ -59,6 +59,10 @@ export default function RootLayout() {
           options={{ headerBackTitle: 'Back' }}
         />
         <Stack.Screen
+          name="skill/[name]"
+          options={{ headerBackTitle: 'Back' }}
+        />
+        <Stack.Screen
           name="about"
           options={{ headerBackTitle: 'Back', title: 'About' }}
         />
