@@ -2,7 +2,7 @@ import React from 'react';
 import { Image, type ImageStyle } from 'react-native';
 import type { ItemType } from '../data/imageRegistry';
 
-const images: Record<ItemType, number> = {
+export const placeholderImages: Record<ItemType, number> = {
   weapon: require('../../assets/images/placeholders/weapon.png'),
   apparel: require('../../assets/images/placeholders/apparel.png'),
   consumable: require('../../assets/images/placeholders/consumable.png'),
@@ -19,7 +19,7 @@ interface Props {
 export function PlaceholderIcon({ type, size = 80, style }: Props) {
   return (
     <Image
-      source={images[type] ?? images.resource}
+      source={placeholderImages[type] ?? placeholderImages.resource}
       style={[{ width: size, height: size, borderRadius: 6 }, style]}
       resizeMode="contain"
     />

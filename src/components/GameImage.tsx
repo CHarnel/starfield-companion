@@ -8,7 +8,7 @@ import {
   hasSkillImage,
   type ItemType,
 } from '../data/imageRegistry';
-import { PlaceholderIcon } from './PlaceholderIcon';
+import { PlaceholderIcon, placeholderImages } from './PlaceholderIcon';
 
 interface SkillImageProps {
   kind: 'skill';
@@ -29,8 +29,6 @@ interface ItemImageProps {
 
 export type GameImageProps = SkillImageProps | ItemImageProps;
 
-const BLURHASH_DARK = 'L02rs+xb00Ri~Wxb00WB00WB00WB';
-
 export function GameImage(props: GameImageProps) {
   const { kind, name, size = 80, style, fallback = 'placeholder' } = props;
   const [failed, setFailed] = useState(false);
@@ -44,9 +42,10 @@ export function GameImage(props: GameImageProps) {
     uri = getItemImageUrl(name);
   }
 
+  const placeholderType: ItemType = kind === 'skill' ? 'resource' : kind;
+
   if (!uri || failed) {
     if (fallback === 'none') return null;
-    const placeholderType: ItemType = kind === 'skill' ? 'resource' : kind;
     return <PlaceholderIcon type={placeholderType} size={size} style={style as ImageStyle} />;
   }
 
@@ -56,7 +55,8 @@ export function GameImage(props: GameImageProps) {
       style={[{ width: size, height: size, borderRadius: 6 }, style]}
       contentFit="contain"
       cachePolicy="disk"
-      placeholder={{ blurhash: BLURHASH_DARK }}
+      placeholder={placeholderImages[placeholderType]}
+      placeholderContentFit="contain"
       transition={200}
       onError={() => setFailed(true)}
     />
