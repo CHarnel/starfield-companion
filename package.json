@@ -11,6 +11,7 @@
     "build:dev": "eas build --profile development --platform all",
     "build:dev:ios": "eas build --profile development --platform ios",
     "build:dev:android": "eas build --profile development --platform android",
+    "build:dev:device": "eas build --profile development-device --platform ios",
     "build:preview": "eas build --profile preview --platform all",
     "build:production": "eas build --profile production --platform all"
   },
