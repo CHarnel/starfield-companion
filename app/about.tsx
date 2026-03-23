@@ -6,6 +6,7 @@ import Constants from 'expo-constants';
 import { colors, spacing, fonts, fontSize, letterSpacing } from '../src/theme';
 
 const PRIVACY_URL = 'https://charnel.github.io/starfield-companion/privacy/';
+const REPO_URL = 'https://github.com/charnel/starfield-companion';
 
 export default function AboutScreen() {
   const version = Constants.expoConfig?.version ?? '1.0.0';
@@ -35,6 +36,26 @@ export default function AboutScreen() {
             owners. This app is provided for informational purposes only.
           </Text>
         </View>
+
+        <View style={styles.card}>
+          <View style={styles.cardHeader}>
+            <Ionicons name="code-slash-outline" size={18} color={colors.primary} />
+            <Text style={styles.cardTitle}>OPEN SOURCE</Text>
+          </View>
+          <Text style={styles.cardBody}>
+            This app is free and open source. Contributions, bug reports, and feature requests are
+            welcome!
+          </Text>
+        </View>
+
+        <Pressable
+          style={({ pressed }) => [styles.row, pressed && styles.rowPressed]}
+          onPress={() => Linking.openURL(REPO_URL)}
+        >
+          <Ionicons name="logo-github" size={18} color={colors.primary} />
+          <Text style={styles.rowLabel}>View on GitHub</Text>
+          <Ionicons name="open-outline" size={16} color={colors.textMuted} />
+        </Pressable>
 
         <Pressable
           style={({ pressed }) => [styles.row, pressed && styles.rowPressed]}
@@ -119,6 +140,7 @@ const styles = StyleSheet.create({
     borderRadius: 2,
     padding: spacing.lg,
     gap: spacing.sm,
+    marginBottom: spacing.md,
   },
   rowPressed: {
     backgroundColor: colors.surfaceLight,
