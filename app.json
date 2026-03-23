@@ -14,7 +14,10 @@
     },
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "com.xcharnel.starfieldcompanion"
+      "bundleIdentifier": "com.xcharnel.starfieldcompanion",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -38,6 +41,13 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "6c0f008f-2c5a-409d-a8bb-2bfe489b5a67"
+      }
+    },
+    "owner": "xcharnel"
   }
 }
