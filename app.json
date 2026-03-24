@@ -15,6 +15,7 @@
     "ios": {
       "supportsTablet": false,
       "bundleIdentifier": "com.xcharnel.starfieldcompanion",
+      "appleTeamId": "AS3WG8BY54",
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false
       }
