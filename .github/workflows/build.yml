@@ -111,16 +111,22 @@ jobs:
 
       - name: Build iOS
         run: |
+          if [ "${{ inputs.profile }}" = "development" ]; then
+            EXT="tar.gz"
+          else
+            EXT="ipa"
+          fi
           eas build --local --non-interactive \
             --platform ios \
             --profile ${{ inputs.profile }} \
-            --output ./app-build
+            --output "./app-build.${EXT}"
+          echo "BUILD_OUTPUT=./app-build.${EXT}" >> "$GITHUB_ENV"
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: ios-${{ inputs.profile }}
-          path: ./app-build
+          path: ${{ env.BUILD_OUTPUT }}
 
       - name: Upload to Diawi
         if: inputs.profile != 'production' && inputs.profile != 'development'
@@ -128,7 +134,7 @@ jobs:
         uses: rnkdsh/action-upload-diawi@v1.5.12
         with:
           token: ${{ secrets.DIAWI_TOKEN }}
-          file: ./app-build
+          file: ${{ env.BUILD_OUTPUT }}
           comment: "${{ inputs.profile }} build #${{ github.run_number }}"
 
       - name: Print install link
