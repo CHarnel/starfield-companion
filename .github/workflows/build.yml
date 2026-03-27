@@ -111,7 +111,7 @@ jobs:
   distribute_android:
     name: Distribute Android (${{ inputs.profile }})
     needs: build_android
-    if: inputs.profile != 'production'
+    if: inputs.profile == 'preview'
     runs-on: ubuntu-latest
     steps:
       - name: Download artifact
