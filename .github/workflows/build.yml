@@ -1,0 +1,143 @@
+name: Build App
+
+on:
+  workflow_dispatch:
+    inputs:
+      platform:
+        type: choice
+        description: Platform to build for
+        options:
+          - android
+          - ios
+          - all
+      profile:
+        type: choice
+        description: Build profile
+        options:
+          - development
+          - development-device
+          - preview
+          - production
+      submit:
+        type: boolean
+        description: Submit to App Store / Play Store after build
+        default: false
+
+jobs:
+  build_android:
+    name: Build Android (${{ inputs.profile }})
+    if: inputs.platform == 'android' || inputs.platform == 'all'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: npm
+
+      - name: Setup JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - name: Setup Expo & EAS
+        uses: expo/expo-github-action@v8
+        with:
+          eas-version: latest
+          token: ${{ secrets.EXPO_TOKEN }}
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Android
+        run: |
+          eas build --local --non-interactive \
+            --platform android \
+            --profile ${{ inputs.profile }} \
+            --output ./app-build.apk
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: android-${{ inputs.profile }}
+          path: ./app-build.apk
+
+      - name: Upload to Diawi
+        if: inputs.profile != 'production'
+        id: diawi_android
+        uses: rnkdsh/action-upload-diawi@v1.5.12
+        with:
+          token: ${{ secrets.DIAWI_TOKEN }}
+          file: ./app-build.apk
+          comment: "${{ inputs.profile }} build #${{ github.run_number }}"
+
+      - name: Print install link
+        if: inputs.profile != 'production'
+        run: |
+          echo "### Android Install Link" >> $GITHUB_STEP_SUMMARY
+          echo "**URL:** ${{ steps.diawi_android.outputs.url }}" >> $GITHUB_STEP_SUMMARY
+          echo "**QR:** ${{ steps.diawi_android.outputs.qrcode }}" >> $GITHUB_STEP_SUMMARY
+
+      - name: Submit to Play Store
+        if: inputs.submit && inputs.profile == 'production'
+        run: eas submit --platform android --profile production --path ./app-build.apk --non-interactive
+
+  build_ios:
+    name: Build iOS (${{ inputs.profile }})
+    if: inputs.platform == 'ios' || inputs.platform == 'all'
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: npm
+
+      - name: Setup Expo & EAS
+        uses: expo/expo-github-action@v8
+        with:
+          eas-version: latest
+          token: ${{ secrets.EXPO_TOKEN }}
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build iOS
+        run: |
+          eas build --local --non-interactive \
+            --platform ios \
+            --profile ${{ inputs.profile }} \
+            --output ./app-build
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ios-${{ inputs.profile }}
+          path: ./app-build
+
+      - name: Upload to Diawi
+        if: inputs.profile != 'production' && inputs.profile != 'development'
+        id: diawi_ios
+        uses: rnkdsh/action-upload-diawi@v1.5.12
+        with:
+          token: ${{ secrets.DIAWI_TOKEN }}
+          file: ./app-build
+          comment: "${{ inputs.profile }} build #${{ github.run_number }}"
+
+      - name: Print install link
+        if: inputs.profile != 'production' && inputs.profile != 'development'
+        run: |
+          echo "### iOS Install Link" >> $GITHUB_STEP_SUMMARY
+          echo "**URL:** ${{ steps.diawi_ios.outputs.url }}" >> $GITHUB_STEP_SUMMARY
+          echo "**QR:** ${{ steps.diawi_ios.outputs.qrcode }}" >> $GITHUB_STEP_SUMMARY
+
+      - name: Submit to App Store
+        if: inputs.submit && inputs.profile == 'production'
+        run: eas submit --platform ios --profile production --path ./app-build --non-interactive

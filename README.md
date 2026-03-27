@@ -74,6 +74,39 @@ Scan the QR code with Expo Go on your phone, or press `i` for iOS simulator / `a
 
 Game data is sourced from the [starfield-data](https://github.com/damienaries/starfield-data) community repository. Star system coordinates are extracted from game files via [uesp/sf-testesm](https://github.com/uesp/sf-testesm). The JSON files are bundled directly in the app at `src/data/json/`.
 
+## 🏗 CI/CD — GitHub Actions builds
+
+This project builds on GitHub Actions instead of EAS Build cloud, eliminating queue wait times. Standard GitHub-hosted runners are free and unlimited for public repositories.
+
+### Running a build
+
+1. Go to the **Actions** tab in the GitHub repo
+2. Select the **Build App** workflow
+3. Click **Run workflow** and pick:
+   - **Platform** — `android`, `ios`, or `all`
+   - **Profile** — `development` (iOS sim), `development-device` (iOS real device), `preview`, or `production`
+   - **Submit** — check to auto-upload production builds to App Store / Play Store
+
+Build artifacts (`.apk` / `.ipa`) are downloadable from the workflow run page. Dev and preview builds are also uploaded to [Diawi](https://www.diawi.com) for wireless installation — the install link and QR code appear in the run summary.
+
+### Required secrets
+
+Set these in **Settings → Secrets and variables → Actions** on the GitHub repo:
+
+| Secret | Required | Purpose |
+|--------|----------|---------|
+| `EXPO_TOKEN` | Yes | Expo access token for EAS CLI auth. Handles build signing credentials and store submission credentials — all managed by Expo. Create at [expo.dev](https://expo.dev) under Account Settings > Access Tokens. |
+| `DIAWI_TOKEN` | For wireless install | Diawi API token for OTA distribution of dev/preview builds. Create a free account at [diawi.com](https://www.diawi.com). |
+
+### Build profiles
+
+| Profile | Android | iOS | Distribution |
+|---------|---------|-----|-------------|
+| `development` | `.apk` (emulator + device) | `.app` (simulator only) | Diawi (Android) / artifact download (iOS) |
+| `development-device` | `.apk` (emulator + device) | `.ipa` (real device) | Diawi |
+| `preview` | `.apk` | `.ipa` | Diawi |
+| `production` | `.aab` | `.ipa` | App Store / Play Store via `eas submit` |
+
 ## License
 
 MIT
