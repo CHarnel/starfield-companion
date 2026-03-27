@@ -66,26 +66,6 @@ jobs:
           name: android-${{ inputs.profile }}
           path: ./app-build.apk
 
-      - name: Upload to Diawi
-        if: inputs.profile != 'production'
-        id: diawi_android
-        uses: rnkdsh/action-upload-diawi@v1.5.12
-        with:
-          token: ${{ secrets.DIAWI_TOKEN }}
-          file: ./app-build.apk
-          comment: "${{ inputs.profile }} build #${{ github.run_number }}"
-
-      - name: Print install link
-        if: inputs.profile != 'production'
-        run: |
-          echo "### Android Install Link" >> $GITHUB_STEP_SUMMARY
-          echo "**URL:** ${{ steps.diawi_android.outputs.url }}" >> $GITHUB_STEP_SUMMARY
-          echo "**QR:** ${{ steps.diawi_android.outputs.qrcode }}" >> $GITHUB_STEP_SUMMARY
-
-      - name: Submit to Play Store
-        if: inputs.submit && inputs.profile == 'production'
-        run: eas submit --platform android --profile production --path ./app-build.apk --non-interactive
-
   build_ios:
     name: Build iOS (${{ inputs.profile }})
     if: inputs.platform == 'ios' || inputs.platform == 'all'
@@ -128,22 +108,108 @@ jobs:
           name: ios-${{ inputs.profile }}
           path: ${{ env.BUILD_OUTPUT }}
 
+  distribute_android:
+    name: Distribute Android (${{ inputs.profile }})
+    needs: build_android
+    if: inputs.profile != 'production'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: android-${{ inputs.profile }}
+
       - name: Upload to Diawi
-        if: inputs.profile != 'production' && inputs.profile != 'development'
-        id: diawi_ios
+        id: diawi
         uses: rnkdsh/action-upload-diawi@v1.5.12
         with:
           token: ${{ secrets.DIAWI_TOKEN }}
-          file: ${{ env.BUILD_OUTPUT }}
+          file: ./app-build.apk
           comment: "${{ inputs.profile }} build #${{ github.run_number }}"
 
       - name: Print install link
-        if: inputs.profile != 'production' && inputs.profile != 'development'
+        run: |
+          echo "### Android Install Link" >> $GITHUB_STEP_SUMMARY
+          echo "**URL:** ${{ steps.diawi.outputs.url }}" >> $GITHUB_STEP_SUMMARY
+          echo "**QR:** ${{ steps.diawi.outputs.qrcode }}" >> $GITHUB_STEP_SUMMARY
+
+  distribute_ios:
+    name: Distribute iOS (${{ inputs.profile }})
+    needs: build_ios
+    if: inputs.profile != 'production' && inputs.profile != 'development'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ios-${{ inputs.profile }}
+
+      - name: Upload to Diawi
+        id: diawi
+        uses: rnkdsh/action-upload-diawi@v1.5.12
+        with:
+          token: ${{ secrets.DIAWI_TOKEN }}
+          file: ./app-build.ipa
+          comment: "${{ inputs.profile }} build #${{ github.run_number }}"
+
+      - name: Print install link
         run: |
           echo "### iOS Install Link" >> $GITHUB_STEP_SUMMARY
-          echo "**URL:** ${{ steps.diawi_ios.outputs.url }}" >> $GITHUB_STEP_SUMMARY
-          echo "**QR:** ${{ steps.diawi_ios.outputs.qrcode }}" >> $GITHUB_STEP_SUMMARY
+          echo "**URL:** ${{ steps.diawi.outputs.url }}" >> $GITHUB_STEP_SUMMARY
+          echo "**QR:** ${{ steps.diawi.outputs.qrcode }}" >> $GITHUB_STEP_SUMMARY
+
+  submit_android:
+    name: Submit Android to Play Store
+    needs: build_android
+    if: inputs.submit && inputs.profile == 'production'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Setup Expo & EAS
+        uses: expo/expo-github-action@v8
+        with:
+          eas-version: latest
+          token: ${{ secrets.EXPO_TOKEN }}
+
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: android-${{ inputs.profile }}
+
+      - name: Submit to Play Store
+        run: eas submit --platform android --profile production --path ./app-build.apk --non-interactive
+
+  submit_ios:
+    name: Submit iOS to App Store
+    needs: build_ios
+    if: inputs.submit && inputs.profile == 'production'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Setup Expo & EAS
+        uses: expo/expo-github-action@v8
+        with:
+          eas-version: latest
+          token: ${{ secrets.EXPO_TOKEN }}
+
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ios-${{ inputs.profile }}
 
       - name: Submit to App Store
-        if: inputs.submit && inputs.profile == 'production'
-        run: eas submit --platform ios --profile production --path ./app-build --non-interactive
+        run: eas submit --platform ios --profile production --path ./app-build.ipa --non-interactive
