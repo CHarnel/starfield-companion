@@ -4,6 +4,7 @@ import { useLocalSearchParams, Stack } from 'expo-router';
 import { colors, spacing, fonts, fontSize, letterSpacing } from '../../../src/theme';
 import { useCategory } from '../../../src/hooks/useCategory';
 import { FieldTable } from '../../../src/components/FieldTable';
+import { VendorSection } from '../../../src/components/VendorSection';
 import { GameImage } from '../../../src/components/GameImage';
 import { getImageTypeForItem } from '../../../src/data/imageRegistry';
 
@@ -44,6 +45,7 @@ export default function ItemDetailScreen() {
         </View>
       )}
       <FieldTable item={item} nameField={category.nameField} />
+      <VendorSection itemName={name} />
     </ScrollView>
   );
 }
