@@ -121,19 +121,22 @@ jobs:
         with:
           name: android-${{ inputs.profile }}
 
-      - name: Upload to Diawi
-        id: diawi
-        uses: rnkdsh/action-upload-diawi@v1.5.12
+      - name: Upload to Firebase App Distribution
+        id: firebase
+        uses: wzieba/Firebase-Distribution-Github-Action@v1
         with:
-          token: ${{ secrets.DIAWI_TOKEN }}
+          appId: ${{ secrets.FIREBASE_APP_ID_ANDROID }}
+          serviceCredentialsFileContent: ${{ secrets.FIREBASE_CREDENTIALS }}
           file: ./app-build.apk
-          comment: "${{ inputs.profile }} build #${{ github.run_number }}"
+          groups: testers
+          releaseNotes: "${{ inputs.profile }} build #${{ github.run_number }}"
 
       - name: Print install link
         run: |
           echo "### Android Install Link" >> $GITHUB_STEP_SUMMARY
-          echo "**URL:** ${{ steps.diawi.outputs.url }}" >> $GITHUB_STEP_SUMMARY
-          echo "**QR:** ${{ steps.diawi.outputs.qrcode }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Console:** ${{ steps.firebase.outputs.FIREBASE_CONSOLE_URI }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Install:** ${{ steps.firebase.outputs.TESTING_URI }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Download:** ${{ steps.firebase.outputs.BINARY_DOWNLOAD_URI }}" >> $GITHUB_STEP_SUMMARY
 
   distribute_ios:
     name: Distribute iOS (${{ inputs.profile }})
@@ -146,19 +149,22 @@ jobs:
         with:
           name: ios-${{ inputs.profile }}
 
-      - name: Upload to Diawi
-        id: diawi
-        uses: rnkdsh/action-upload-diawi@v1.5.12
+      - name: Upload to Firebase App Distribution
+        id: firebase
+        uses: wzieba/Firebase-Distribution-Github-Action@v1
         with:
-          token: ${{ secrets.DIAWI_TOKEN }}
+          appId: ${{ secrets.FIREBASE_APP_ID_IOS }}
+          serviceCredentialsFileContent: ${{ secrets.FIREBASE_CREDENTIALS }}
           file: ./app-build.ipa
-          comment: "${{ inputs.profile }} build #${{ github.run_number }}"
+          groups: testers
+          releaseNotes: "${{ inputs.profile }} build #${{ github.run_number }}"
 
       - name: Print install link
         run: |
           echo "### iOS Install Link" >> $GITHUB_STEP_SUMMARY
-          echo "**URL:** ${{ steps.diawi.outputs.url }}" >> $GITHUB_STEP_SUMMARY
-          echo "**QR:** ${{ steps.diawi.outputs.qrcode }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Console:** ${{ steps.firebase.outputs.FIREBASE_CONSOLE_URI }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Install:** ${{ steps.firebase.outputs.TESTING_URI }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Download:** ${{ steps.firebase.outputs.BINARY_DOWNLOAD_URI }}" >> $GITHUB_STEP_SUMMARY
 
   submit_android:
     name: Submit Android to Play Store
