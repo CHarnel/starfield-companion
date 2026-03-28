@@ -54,6 +54,8 @@ jobs:
         run: npm ci
 
       - name: Build Android
+        env:
+          GRADLE_OPTS: -Dorg.gradle.workers.max=2
         run: |
           eas build --local --non-interactive \
             --platform android \
