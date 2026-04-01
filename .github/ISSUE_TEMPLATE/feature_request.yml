@@ -28,13 +28,13 @@ body:
     attributes:
       label: Area of the app
       options:
-        - Browse / Home screen
-        - Search
-        - Category list
-        - Item detail view
-        - Data / Content
-        - Performance
-        - Other
+        - Database (browse / search categories)
+        - Locator (resource locator)
+        - Explore (star map / planets)
+        - Skills (skill trees)
+        - Crafting (recipes / stations)
+        - Item detail views
+        - General / Other
     validations:
       required: true
 
