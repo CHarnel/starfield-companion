@@ -107,6 +107,10 @@ Set these in **Settings → Secrets and variables → Actions** on the GitHub re
 | `preview` | `.apk` | `.ipa` | Diawi |
 | `production` | `.aab` | `.ipa` | App Store / Play Store via `eas submit` |
 
+## 🐛 Bugs & suggestions
+
+Found a bug or have an idea? [Open an issue](../../issues/new/choose) on GitHub — there are templates for bug reports and feature requests to help you get started.
+
 ## License
 
 MIT
