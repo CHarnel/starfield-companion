@@ -40,7 +40,8 @@
       "expo-router",
       "expo-font",
       "expo-updates",
-      "./plugins/withGradleJvmArgs"
+      "./plugins/withGradleJvmArgs",
+      "react-native-iap"
     ],
     "updates": {
       "url": "https://u.expo.dev/6c0f008f-2c5a-409d-a8bb-2bfe489b5a67"
